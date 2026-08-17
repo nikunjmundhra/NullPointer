@@ -1,0 +1,10 @@
+hotspot_id,region_id,date,centroid_lat,centroid_lon,severity,hcho_value,affected_cell_count
+HS_007,punjab_stubble_belt,2026-08-16,31.75068,74.78581,high,0.0002571,37
+HS_002,kanpur_industrial,2026-08-16,26.5,80.43889,moderate,0.00025203,18
+HS_004,punjab_stubble_belt,2026-08-16,31.3625,75.29375,moderate,0.00025001,4
+HS_001,kanpur_industrial,2026-08-16,26.325,80.225,moderate,0.00024969,3
+HS_006,punjab_stubble_belt,2026-08-16,31.525,74.625,moderate,0.00023727,1
+HS_008,punjab_stubble_belt,2026-08-16,31.725,75.275,moderate,0.0002361,1
+HS_005,punjab_stubble_belt,2026-08-16,31.475,74.875,moderate,0.00023251,3
+HS_009,punjab_stubble_belt,2026-08-16,31.775,75.3,moderate,0.00023162,1
+HS_003,kanpur_industrial,2026-08-16,26.575,80.175,moderate,0.00022975,1

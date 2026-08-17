@@ -1,0 +1,167 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.78581,
+          31.75068
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_007",
+        "region_id": "punjab_stubble_belt",
+        "date": "2026-08-16",
+        "severity": "high",
+        "hcho_value": 0.0002571,
+        "affected_cell_count": 37
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.43889,
+          26.5
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_002",
+        "region_id": "kanpur_industrial",
+        "date": "2026-08-16",
+        "severity": "moderate",
+        "hcho_value": 0.00025203,
+        "affected_cell_count": 18
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.29375,
+          31.3625
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_004",
+        "region_id": "punjab_stubble_belt",
+        "date": "2026-08-16",
+        "severity": "moderate",
+        "hcho_value": 0.00025001,
+        "affected_cell_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.225,
+          26.325
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_001",
+        "region_id": "kanpur_industrial",
+        "date": "2026-08-16",
+        "severity": "moderate",
+        "hcho_value": 0.00024969,
+        "affected_cell_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.625,
+          31.525
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_006",
+        "region_id": "punjab_stubble_belt",
+        "date": "2026-08-16",
+        "severity": "moderate",
+        "hcho_value": 0.00023727,
+        "affected_cell_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.275,
+          31.725
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_008",
+        "region_id": "punjab_stubble_belt",
+        "date": "2026-08-16",
+        "severity": "moderate",
+        "hcho_value": 0.0002361,
+        "affected_cell_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.875,
+          31.475
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_005",
+        "region_id": "punjab_stubble_belt",
+        "date": "2026-08-16",
+        "severity": "moderate",
+        "hcho_value": 0.00023251,
+        "affected_cell_count": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.3,
+          31.775
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_009",
+        "region_id": "punjab_stubble_belt",
+        "date": "2026-08-16",
+        "severity": "moderate",
+        "hcho_value": 0.00023162,
+        "affected_cell_count": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.175,
+          26.575
+        ]
+      },
+      "properties": {
+        "hotspot_id": "HS_003",
+        "region_id": "kanpur_industrial",
+        "date": "2026-08-16",
+        "severity": "moderate",
+        "hcho_value": 0.00022975,
+        "affected_cell_count": 1
+      }
+    }
+  ]
+}
