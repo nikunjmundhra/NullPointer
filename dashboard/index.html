@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirLens India — Satellite Air Quality Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Add your Adobe Fonts web-project stylesheet here to activate Neue Haas Grotesk + Source Serif 4. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --void:#f1efe8;
+    --panel:#fffdf8;
+    --panel-raised:#e8e5dc;
+    --line:#d6d1c5;
+    --ink:#192522;
+    --ink-muted:#65716a;
+    --violet:#c9552e;
+    --violet-dim:#9c4328;
+    --amber:#c9552e;
+    --sage:#39745e;
+    /* Replace these with your Adobe Fonts kit families when the kit is ready. */
+    --display:'Source Serif 4','Iowan Old Style',Georgia,serif;
+    --body:'Neue Haas Grotesk Text','Helvetica Neue',Arial,sans-serif;
+    --mono:'SFMono-Regular',Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--void);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--violet);color:var(--void);}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--violet);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:6px;height:6px;border-radius:50%;
+    background:var(--violet);
+    box-shadow:0 0 0 3px rgba(155,140,255,.18);
+  }
+
+  /* ── NAV ───────────────────────────────────────── */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(10,12,16,.72);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:64px;
+  }
+  .brand{
+    font-family:var(--display);font-weight:700;font-size:17px;
+    display:flex;align-items:center;gap:9px;letter-spacing:-.01em;
+  }
+  .brand-mark{
+    width:16px;height:16px;border:1.5px solid var(--violet);border-radius:50%;
+    position:relative;flex:none;
+  }
+  .brand-mark::after{
+    content:"";position:absolute;inset:3px;border-radius:50%;background:var(--violet);
+  }
+  nav .links{display:flex;gap:28px;font-size:13.5px;color:var(--ink-muted);}
+  nav .links a{transition:color .15s;}
+  nav .links a:hover{color:var(--ink);}
+  .pill{
+    font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+    border:1px solid var(--line);border-radius:99px;
+    padding:5px 12px;color:var(--ink-muted);
+  }
+
+  /* ── HERO ──────────────────────────────────────── */
+  .hero{
+    position:relative;
+    padding:168px 0 96px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(to right, rgba(155,140,255,.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(155,140,255,.055) 1px, transparent 1px);
+    background-size:42px 42px;
+    mask-image:radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 90%);
+  }
+  .hero-content{position:relative;}
+  h1.headline{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(38px,6vw,74px);
+    line-height:1.03;letter-spacing:-.025em;
+    margin:22px 0 24px;max-width:780px;
+  }
+  h1.headline em{
+    font-style:normal;color:var(--violet);
+  }
+  .hero-sub{
+    font-size:17px;color:var(--ink-muted);max-width:560px;margin-bottom:36px;
+  }
+  .hero-cta{display:flex;gap:14px;align-items:center;margin-bottom:64px;}
+  .btn{
+    font-family:var(--body);font-weight:600;font-size:14px;
+    padding:12px 22px;border-radius:8px;border:1px solid transparent;
+    cursor:pointer;transition:all .15s;
+  }
+  .btn-primary{background:var(--violet);color:#0a0c10;}
+  .btn-primary:hover{background:#2f604e;}
+  .btn-ghost{border-color:var(--line);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--violet-dim);}
+
+  /* satellite sweep signature */
+  .sweep-stage{
+    position:relative;height:280px;border:1px solid var(--line);
+    border-radius:14px;background:var(--panel);overflow:hidden;
+  }
+  .sweep-stage svg{position:absolute;inset:0;width:100%;height:100%;}
+  .sweep-line{
+    position:absolute;top:0;bottom:0;width:2px;
+    background:linear-gradient(to bottom, transparent, var(--violet), transparent);
+    box-shadow:0 0 24px 2px rgba(155,140,255,.6);
+    animation:sweep 5s linear infinite;
+  }
+  @keyframes sweep{
+    0%{left:0%;opacity:0;}
+    5%{opacity:1;}
+    95%{opacity:1;}
+    100%{left:100%;opacity:0;}
+  }
+  .hotspot-dot{
+    position:absolute;width:8px;height:8px;border-radius:50%;
+    background:var(--amber);
+    box-shadow:0 0 0 0 rgba(240,163,69,.5);
+    opacity:0;
+    animation-name:reveal-pulse;
+    animation-timing-function:ease-out;
+    animation-iteration-count:infinite;
+    animation-duration:5s;
+  }
+  @keyframes reveal-pulse{
+    0%,20%{opacity:0;transform:scale(.4);}
+    26%{opacity:1;transform:scale(1.4);box-shadow:0 0 0 8px rgba(240,163,69,0);}
+    34%{transform:scale(1);}
+    90%{opacity:1;}
+    100%{opacity:0;}
+  }
+  .stage-label{
+    position:absolute;bottom:14px;left:18px;
+    font-family:var(--mono);font-size:11px;color:var(--ink-muted);
+    letter-spacing:.05em;
+  }
+  .stage-label b{color:var(--sage);}
+
+  @media (prefers-reduced-motion:reduce){
+    .sweep-line, .hotspot-dot{animation:none !important;}
+  }
+
+  /* ── SECTION shared ──────────────────────────────── */
+  section{padding:88px 0;border-bottom:1px solid var(--line);}
+  .section-head{max-width:620px;margin-bottom:52px;}
+  .section-head h2{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(26px,3.4vw,38px);letter-spacing:-.02em;
+    margin-top:14px;
+  }
+  .section-head p{color:var(--ink-muted);margin-top:14px;font-size:15.5px;}
+
+  /* ── THE GAP ──────────────────────────────────────── */
+  .gap-layout{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;
+  }
+  .gap-visual{
+    border:1px solid var(--line);border-radius:14px;background:var(--panel);
+    padding:28px;
+  }
+  .gap-row{
+    display:flex;align-items:center;gap:14px;
+    padding:13px 0;border-bottom:1px solid var(--line);
+    font-family:var(--mono);font-size:13px;
+  }
+  .gap-row:last-child{border-bottom:none;}
+  .gap-row .dot{width:8px;height:8px;border-radius:50%;flex:none;}
+  .gap-row .coverage-track{
+    flex:1;height:5px;background:#1c212b;border-radius:99px;overflow:hidden;
+  }
+  .gap-row .coverage-fill{height:100%;border-radius:99px;}
+  .gap-row .pct{color:var(--ink-muted);width:38px;text-align:right;}
+
+  .gap-copy p{color:var(--ink-muted);font-size:15px;margin-bottom:16px;}
+  .gap-copy strong{color:var(--ink);font-weight:600;}
+
+  /* ── PIPELINE ─────────────────────────────────────── */
+  .pipeline{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:14px;
+    overflow:hidden;
+  }
+  .pipe-step{
+    background:var(--panel);padding:26px 20px;min-height:190px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .pipe-num{
+    font-family:var(--mono);font-size:12px;color:var(--violet);
+  }
+  .pipe-title{font-family:var(--display);font-weight:600;font-size:15.5px;}
+  .pipe-desc{font-size:12.5px;color:var(--ink-muted);line-height:1.5;}
+
+  /* ── LIVE MONITOR ─────────────────────────────────── */
+  .monitor-shell{
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    background:var(--panel);
+  }
+  .monitor-tabs{
+    display:flex;border-bottom:1px solid var(--line);
+    background:var(--panel-raised);
+  }
+  .monitor-tab{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;
+    padding:15px 22px;color:var(--ink-muted);cursor:pointer;
+    border-right:1px solid var(--line);
+    transition:color .15s,background .15s;
+    display:flex;align-items:center;gap:8px;
+  }
+  .monitor-tab .dotstat{width:6px;height:6px;border-radius:50%;background:var(--ink-muted);}
+  .monitor-tab.active{color:var(--ink);background:var(--panel);}
+  .monitor-tab.active .dotstat{background:var(--amber);}
+  .monitor-tab:hover{color:var(--ink);}
+
+  .monitor-body{display:grid;grid-template-columns:1.3fr 1fr;}
+  #map{height:460px;width:100%;background:#0d1117;}
+  .leaflet-container{background:#0d1117;font-family:var(--body);}
+
+  .monitor-side{
+    border-left:1px solid var(--line);
+    display:flex;flex-direction:column;
+  }
+  .kpi-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--line);border-bottom:1px solid var(--line);
+  }
+  .kpi{background:var(--panel);padding:18px 20px;}
+  .kpi-label{font-family:var(--mono);font-size:10.5px;color:var(--ink-muted);letter-spacing:.05em;text-transform:uppercase;}
+  .kpi-value{font-family:var(--display);font-size:22px;font-weight:600;margin-top:6px;}
+  .kpi-value.amber{color:var(--amber);}
+  .kpi-value.sage{color:var(--sage);}
+
+  .slider-block{padding:18px 20px;border-bottom:1px solid var(--line);}
+  .slider-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;}
+  .slider-row span{font-family:var(--mono);font-size:11px;color:var(--ink-muted);}
+  .slider-row b{font-family:var(--mono);font-size:12.5px;color:var(--ink);}
+  input[type="range"]{
+    -webkit-appearance:none;width:100%;height:4px;border-radius:99px;
+    background:#1c212b;outline:none;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;width:14px;height:14px;border-radius:50%;
+    background:var(--violet);cursor:pointer;box-shadow:0 0 0 4px rgba(155,140,255,.18);
+  }
+
+  .advisory{
+    padding:18px 20px;flex:1;display:flex;flex-direction:column;gap:10px;
+  }
+  .advisory-label{font-family:var(--mono);font-size:10.5px;color:var(--ink-muted);letter-spacing:.05em;text-transform:uppercase;}
+  .advisory-text{font-size:13.5px;color:var(--ink);line-height:1.55;}
+  .advisory-text b{color:var(--amber);}
+  .legend{display:flex;gap:16px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line);}
+  .legend-item{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--ink-muted);}
+  .legend-dot{width:8px;height:8px;border-radius:50%;}
+
+  .charts{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+    border-top:1px solid var(--line);
+  }
+  .chart-cell{background:var(--panel);padding:20px;}
+  .chart-cell h4{
+    font-family:var(--mono);font-size:11px;color:var(--ink-muted);
+    text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;
+  }
+  .chart-cell canvas{max-height:180px;}
+
+  @media (max-width:900px){
+    .monitor-body{grid-template-columns:1fr;}
+    .gap-layout{grid-template-columns:1fr;}
+    .pipeline{grid-template-columns:1fr 1fr;}
+    .charts{grid-template-columns:1fr;}
+  }
+
+  /* ── FOOTER ───────────────────────────────────────── */
+  footer{padding:48px 0;}
+  footer .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:16px;
+  }
+  footer .disclaimer{
+    font-family:var(--mono);font-size:11.5px;color:var(--ink-muted);max-width:520px;line-height:1.6;
+  }
+  footer .credit{font-family:var(--mono);font-size:11.5px;color:var(--ink-muted);}
+
+  :focus-visible{outline:2px solid var(--violet);outline-offset:2px;}
+
+  /* ── Editorial redesign ─────────────────────────── */
+  body{background:var(--void);color:var(--ink);}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.3;background-image:radial-gradient(#b3aca0 .55px,transparent .55px);background-size:8px 8px;}
+  nav{background:rgba(241,239,232,.91);border-bottom-color:var(--line);backdrop-filter:blur(14px);}
+  nav .wrap{height:72px;}
+  .brand{font-family:var(--display);font-size:21px;letter-spacing:-.025em;}
+  .brand-mark{width:18px;height:18px;border-color:var(--amber);border-radius:2px;transform:rotate(45deg);}
+  .brand-mark::after{inset:4px;border-radius:1px;background:var(--amber);}
+  nav .links{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#4d5a53;}
+  .pill{border-color:#b9b2a5;color:#4d5a53;background:#f8f6f0;}
+  .hero{padding:158px 0 84px;border-bottom:0;}
+  .hero::after{content:"";position:absolute;right:4vw;top:115px;width:min(38vw,460px);height:min(38vw,460px);border:1px solid #cfc8bb;border-radius:50%;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 37px,rgba(57,116,94,.13) 38px 39px);opacity:.75;}
+  .hero-grid{opacity:.55;background-image:linear-gradient(to right,rgba(57,116,94,.11) 1px,transparent 1px),linear-gradient(to bottom,rgba(57,116,94,.11) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent);}
+  .hero-content{max-width:1180px;}
+  .eyebrow{color:var(--sage);font-size:10px;font-weight:600;letter-spacing:.16em;}
+  .eyebrow::before{background:var(--sage);box-shadow:0 0 0 3px rgba(57,116,94,.13);}
+  h1.headline{font-family:var(--display);font-weight:600;font-size:clamp(45px,6.1vw,79px);line-height:.98;letter-spacing:-.045em;max-width:900px;margin-top:24px;}
+  h1.headline em{color:var(--amber);font-style:italic;}
+  .hero-sub{font-size:18px;line-height:1.55;color:#536058;max-width:600px;}
+  .btn{border-radius:0;padding:13px 22px;letter-spacing:.015em;}
+  .btn-primary{background:var(--ink);color:#fffdf8;}
+  .btn-primary:hover{background:var(--sage);}
+  .btn-ghost{border-color:#aaa396;color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink);background:#e8e5dc;}
+  .sweep-stage{height:300px;border-radius:0;background:#1d2b28;border:0;box-shadow:inset 0 0 0 1px rgba(255,253,248,.2);}
+  .sweep-stage::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 0 43%,rgba(255,253,248,.09) 43.15% 43.4%,transparent 43.55%);}
+  .sweep-stage svg path{stroke:#8ba499;}
+  .sweep-line{background:linear-gradient(to bottom,transparent,var(--amber),transparent);box-shadow:0 0 24px 2px rgba(201,85,46,.6);}
+  .stage-label{color:#c8d0c5;}.stage-label b{color:#ffba7a;}
+  section{padding:112px 0;border-bottom-color:var(--line);}
+  .section-head{max-width:680px;margin-bottom:48px;}
+  .section-head h2{font-family:var(--display);font-size:clamp(31px,4vw,48px);font-weight:600;letter-spacing:-.035em;line-height:1.05;}
+  .section-head p,.gap-copy p{color:#56635b;font-size:16px;line-height:1.65;}
+  .gap-layout{gap:74px;}.gap-visual{border:0;border-radius:0;background:#dedbd1;padding:28px 30px;position:relative;}
+  .gap-visual::before{content:"Coverage \A field note";white-space:pre;position:absolute;right:18px;top:18px;color:#6b756d;font-family:var(--mono);font-size:10px;line-height:1.45;text-transform:uppercase;letter-spacing:.08em;}
+  .gap-row{border-bottom-color:#c8c2b5;padding:17px 0;color:var(--ink);}.gap-row .coverage-track{background:#c7c1b5;height:6px;}.gap-row .pct{font-size:11px;}
+  .pipeline{border-radius:0;border-color:var(--line);background:var(--line);}
+  .pipe-step{background:#f8f6f0;min-height:230px;padding:28px 22px;transition:background .25s ease;}
+  .pipe-step:hover{background:#e9eee8;}.pipe-num{color:var(--amber);font-weight:600;}.pipe-title{font-family:var(--display);font-size:20px;}.pipe-desc{font-size:13px;color:#59655e;}
+  .monitor-shell{border-radius:0;border-color:#b9b2a5;background:var(--panel);box-shadow:12px 12px 0 #d9d5ca;}
+  .monitor-tabs{background:#e8e5dc;border-bottom-color:var(--line);}.monitor-tab{font-size:11px;color:#576159;border-right-color:var(--line);}.monitor-tab.active{background:#fffdf8;color:var(--ink);}.monitor-tab.active .dotstat{background:var(--amber);}
+  #map,.leaflet-container{background:#dfe4db;}.leaflet-tile{filter:saturate(.52) contrast(.92) sepia(.1);}
+  .monitor-side{border-left-color:var(--line);}.kpi-grid,.charts{background:var(--line);}.kpi,.chart-cell{background:#fffdf8;}.kpi-label,.advisory-label,.chart-cell h4{color:#657168;}.kpi-value.amber{color:var(--amber);}.kpi-value.sage{color:var(--sage);}
+  .slider-block,.advisory{border-bottom-color:var(--line);}.advisory-text{color:#34423a;}.advisory-text b{color:var(--amber);}
+  input[type="range"]::-webkit-slider-thumb{background:var(--amber);box-shadow:0 0 0 4px rgba(201,85,46,.16);}
+  footer{background:#1d2b28;color:#e7e8df;}footer .disclaimer,footer .credit{color:#c4cec2;}
+
+  /* Motion is intentionally sparse: each story element enters only once. */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.is-visible{opacity:1;transform:none;}
+  .reveal-stagger > *{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1);}
+  .reveal-stagger.is-visible > *{opacity:1;transform:none;}
+  .reveal-stagger.is-visible > :nth-child(2){transition-delay:.08s}.reveal-stagger.is-visible > :nth-child(3){transition-delay:.16s}.reveal-stagger.is-visible > :nth-child(4){transition-delay:.24s}.reveal-stagger.is-visible > :nth-child(5){transition-delay:.32s}
+  .animate-bars .coverage-fill{width:0 !important;transition:width 1s cubic-bezier(.2,.7,.2,1);}.animate-bars.is-visible .coverage-fill{width:var(--target-width) !important;}
+  @media (prefers-reduced-motion:reduce){.reveal,.reveal-stagger > *{opacity:1;transform:none;transition:none;}.animate-bars .coverage-fill{transition:none;}}
+  @media (max-width:700px){.wrap{padding:0 20px;}nav .links,.pill{display:none;}.hero{padding-top:126px;}.hero::after{width:70vw;height:70vw;right:-25vw;top:100px;}section{padding:72px 0;}.hero-cta{flex-wrap:wrap;}.sweep-stage{height:230px;}.pipeline{grid-template-columns:1fr;}.pipe-step{min-height:150px;}.monitor-shell{box-shadow:7px 7px 0 #d9d5ca;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span class="brand-mark"></span>AirLens India</div>
+    <div class="links">
+      <a href="#gap">The Gap</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#monitor">Live Monitor</a>
+    </div>
+    <div class="pill">SIH 2026 · GGSIPU2603</div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="wrap hero-content">
+    <div class="eyebrow">Satellite HCHO Monitoring · Sentinel-5P</div>
+    <h1 class="headline">Pollution shows up on <em>satellite</em> before it shows up on any sensor.</h1>
+    <p class="hero-sub">AirLens India tracks atmospheric formaldehyde from orbit to surface anomalies where India's ground monitoring network has no coverage at all — starting with Delhi-NCR, the Punjab stubble belt, and Kanpur.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="document.getElementById('monitor').scrollIntoView({behavior:'smooth'})">View live monitor</button>
+      <button class="btn btn-ghost" onclick="document.getElementById('pipeline').scrollIntoView({behavior:'smooth'})">How it works</button>
+    </div>
+
+    <div class="sweep-stage" id="sweepStage">
+      <svg viewBox="0 0 600 280" preserveAspectRatio="none">
+        <path d="M120,40 L100,240 L280,260 L340,50 Z" fill="none" stroke="#232a35" stroke-width="1.5"/>
+        <path d="M340,50 L400,60 L430,180 L340,260" fill="none" stroke="#232a35" stroke-width="1.5"/>
+      </svg>
+      <div class="hotspot-dot" style="left:31%; top:38%; animation-delay:.1s;"></div>
+      <div class="hotspot-dot" style="left:38%; top:22%; animation-delay:.4s;"></div>
+      <div class="hotspot-dot" style="left:52%; top:58%; animation-delay:.7s;"></div>
+      <div class="sweep-line"></div>
+      <div class="stage-label">TROPOMI pass · orbit revisit <b>~1/day</b> · resolution <b>5.5×3.5km</b></div>
+    </div>
+  </div>
+</header>
+
+<section id="gap">
+  <div class="wrap">
+    <div class="gap-layout">
+      <div class="gap-visual">
+        <div class="gap-row">
+          <span class="dot" style="background:var(--sage)"></span>
+          <span style="width:110px">Delhi-NCR</span>
+          <span class="coverage-track"><span class="coverage-fill" style="width:78%;background:var(--sage)"></span></span>
+          <span class="pct">dense</span>
+        </div>
+        <div class="gap-row">
+          <span class="dot" style="background:var(--amber)"></span>
+          <span style="width:110px">Kanpur zone</span>
+          <span class="coverage-track"><span class="coverage-fill" style="width:34%;background:var(--amber)"></span></span>
+          <span class="pct">sparse</span>
+        </div>
+        <div class="gap-row">
+          <span class="dot" style="background:#e5484d"></span>
+          <span style="width:110px">Punjab belt</span>
+          <span class="coverage-track"><span class="coverage-fill" style="width:8%;background:#e5484d"></span></span>
+          <span class="pct">none</span>
+        </div>
+      </div>
+      <div class="gap-copy">
+        <div class="eyebrow">The Gap</div>
+        <div class="section-head" style="margin-bottom:0;">
+          <h2>Ground stations are accurate. They're also nowhere near enough.</h2>
+        </div>
+        <p style="margin-top:20px;">CPCB monitoring gives precise PM2.5, PM10, and NO₂ readings — but only where a physical station exists, almost always in cities. <strong>Rural and agricultural regions, including the areas that produce some of the season's worst pollution events, have little to no ground coverage.</strong></p>
+        <p>Satellites don't have that gap. Sentinel-5P passes over every region daily, sensor or no sensor, measuring atmospheric formaldehyde — a marker tied to biomass burning and industrial VOC emissions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Pipeline</div>
+      <h2>From orbit to hotspot, five steps.</h2>
+      <p>Every region runs the same deterministic sequence, so results stay comparable across Delhi-NCR, Punjab, and Kanpur.</p>
+    </div>
+    <div class="pipeline">
+      <div class="pipe-step">
+        <span class="pipe-num">01</span>
+        <span class="pipe-title">Retrieve</span>
+        <span class="pipe-desc">Pull tropospheric HCHO column density from the Sentinel-5P TROPOMI offline product for each region's bounding box.</span>
+      </div>
+      <div class="pipe-step">
+        <span class="pipe-num">02</span>
+        <span class="pipe-title">Filter</span>
+        <span class="pipe-desc">Drop low-quality retrievals — cloud fraction above 0.3, QA value below the recommended threshold.</span>
+      </div>
+      <div class="pipe-step">
+        <span class="pipe-num">03</span>
+        <span class="pipe-title">Baseline</span>
+        <span class="pipe-desc">Build each grid cell's historical normal from prior observations at the same time of year.</span>
+      </div>
+      <div class="pipe-step">
+        <span class="pipe-num">04</span>
+        <span class="pipe-title">Detect</span>
+        <span class="pipe-desc">Score how far today's reading sits from that cell's own baseline — not a fixed threshold, a relative anomaly.</span>
+      </div>
+      <div class="pipe-step">
+        <span class="pipe-num">05</span>
+        <span class="pipe-title">Cluster</span>
+        <span class="pipe-desc">Group neighboring high-anomaly cells into a single named hotspot, sized by severity.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="monitor" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Live Monitor</div>
+      <h2>The hotspot map.</h2>
+      <p>Running on synthetic data until the pipeline's real output lands — same schema, same interactions, no rewrite needed on handoff.</p>
+    </div>
+
+    <div class="monitor-shell">
+      <div class="monitor-tabs" id="regionTabs"></div>
+      <div class="monitor-body">
+        <div id="map"></div>
+        <div class="monitor-side">
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-label">Mean HCHO</div><div class="kpi-value" id="kpiHcho">—</div></div>
+            <div class="kpi"><div class="kpi-label">Max HCHO</div><div class="kpi-value amber" id="kpiAnomaly">—</div></div>
+            <div class="kpi"><div class="kpi-label">Hotspot cells</div><div class="kpi-value" id="kpiHotspots">—</div></div>
+            <div class="kpi"><div class="kpi-label">Grid flagged</div><div class="kpi-value sage" id="kpiBaseline">—</div></div>
+          </div>
+          <div class="slider-block">
+            <div class="slider-row">
+              <span>Observation</span>
+              <b id="dateLabel">—</b>
+            </div>
+            <div style="font-family:var(--mono);font-size:10.5px;color:var(--ink-muted);">Single live TROPOMI pass — historical series not yet available from Team B.</div>
+          </div>
+          <div class="advisory">
+            <div class="advisory-label">Advisory</div>
+            <div class="advisory-text" id="advisoryText">Loading…</div>
+            <div class="legend">
+              <div class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Higher HCHO intensity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="chart-cell">
+          <h4>Top ranked hotspot cells — this region</h4>
+          <canvas id="trendChart"></canvas>
+        </div>
+        <div class="chart-cell">
+          <h4>Grid flagged (%) — all regions</h4>
+          <canvas id="anomalyChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disclaimer">Atmospheric HCHO is a proxy, not a direct measure of ground-level AQI or human exposure. Hotspot flags indicate anomalous atmospheric conditions worth cross-checking against ground data where available.</div>
+    <div class="credit">AirLens India — Team C · Smart India Hackathon 2026</div>
+  </div>
+</footer>
+
+<script type="text/plain" id="retired-embedded-demo-data">
+// ── REAL DATA — from Team A: hcho_hotspot_regional_summary.csv + hcho_hotspots_ranked_live.csv ──
+const REGIONS = {
+  delhi_ncr: { label:"Delhi-NCR", bbox:[76.80,28.35,77.55,28.90], center:[28.62,77.20], zoom:9 },
+  punjab_stubble_belt: { label:"Amritsar / Punjab Belt", bbox:[74.60,31.30,75.30,31.90], center:[31.63,74.87], zoom:9 },
+  kanpur_industrial: { label:"Kanpur Industrial", bbox:[80.15,26.30,80.55,26.60], center:[26.45,80.35], zoom:10 },
+};
+
+// hcho_hotspot_regional_summary.csv, verbatim
+const SUMMARY = {
+  kanpur_industrial:      { total_grid_points:53,  hotspot_count:22, mean_hcho:0.00021098932297157168, max_hcho:0.0002775220694,    hotspot_pct:41.5 },
+  punjab_stubble_belt:    { total_grid_points:178, hotspot_count:47, mean_hcho:0.00021247110699988312, max_hcho:0.0003230039410378, hotspot_pct:26.4 },
+  delhi_ncr:              { total_grid_points:174, hotspot_count:0,  mean_hcho:0.00011230741289629952, max_hcho:0.0001614764351009, hotspot_pct:0.0  },
+};
+
+// hcho_hotspots_ranked_live.csv, verbatim (all rows — this file only contains flagged hotspot cells)
+const RANKED_CSV = `hotspot_rank,region_id,date,lat,lon,hcho_value_calibrated,cloud_fraction
+1,punjab_stubble_belt,2026-08-16,31.725,74.675,0.0003230039410378,0.1715516668022179
+2,punjab_stubble_belt,2026-08-16,31.725,74.725,0.0003137045236633,0.1759830393576743
+3,punjab_stubble_belt,2026-08-16,31.775,74.725,0.0003041187446442,0.1565498509955528
+4,punjab_stubble_belt,2026-08-16,31.775,74.775,0.0003036875509629,0.1535282840147556
+5,punjab_stubble_belt,2026-08-16,31.725,74.775,0.0002987881441063,0.1896338932724391
+6,punjab_stubble_belt,2026-08-16,31.675,74.825,0.0002844560894118,0.1850776866315317
+7,punjab_stubble_belt,2026-08-16,31.775,74.675,0.0002816849686211,0.1765858767596826
+8,punjab_stubble_belt,2026-08-16,31.675,74.775,0.0002788569915206,0.1841019409645636
+9,kanpur_industrial,2026-08-16,26.525,80.375,0.0002775220694,0.1650716284906068
+10,kanpur_industrial,2026-08-16,26.475,80.425,0.0002758927930128,0.1609395506126407
+11,punjab_stubble_belt,2026-08-16,31.675,74.875,0.0002756709662175,0.1883876986357488
+12,kanpur_industrial,2026-08-16,26.475,80.375,0.0002723833605313,0.1632277974238219
+13,kanpur_industrial,2026-08-16,26.525,80.325,0.0002721736699244,0.1693219844272821
+14,punjab_stubble_belt,2026-08-16,31.675,74.725,0.0002693532845137,0.1886935783068044
+15,punjab_stubble_belt,2026-08-16,31.775,74.825,0.0002687003319604,0.1624206444983748
+16,kanpur_industrial,2026-08-16,26.525,80.425,0.0002682805281361,0.1523559255070749
+17,punjab_stubble_belt,2026-08-16,31.725,74.825,0.0002673251693165,0.1919003261823992
+18,punjab_stubble_belt,2026-08-16,31.725,74.625,0.0002655003253221,0.1646627739216844
+19,punjab_stubble_belt,2026-08-16,31.825,74.775,0.0002620245693902,0.1617188566973217
+20,kanpur_industrial,2026-08-16,26.575,80.425,0.0002613363048561,0.1384588117858191
+21,kanpur_industrial,2026-08-16,26.475,80.475,0.0002574208117674,0.158731260159316
+22,punjab_stubble_belt,2026-08-16,31.825,74.725,0.0002570672610334,0.1624609035469192
+23,punjab_stubble_belt,2026-08-16,31.775,74.625,0.0002544812441431,0.1501261117680206
+24,punjab_stubble_belt,2026-08-16,31.375,75.3,0.0002542404354315,0.1529679345596484
+25,punjab_stubble_belt,2026-08-16,31.325,75.3,0.0002541068182528,0.1595445193914798
+26,kanpur_industrial,2026-08-16,26.525,80.475,0.0002536279983647,0.140613664680423
+27,kanpur_industrial,2026-08-16,26.325,80.275,0.0002534336994277,0.1118979164319737
+28,punjab_stubble_belt,2026-08-16,31.425,75.3,0.0002525547153157,0.1348911025675432
+29,kanpur_industrial,2026-08-16,26.425,80.425,0.0002523756307166,0.1595798413577118
+30,kanpur_industrial,2026-08-16,26.325,80.175,0.0002519775176304,0.1244688000967497
+31,punjab_stubble_belt,2026-08-16,31.875,74.925,0.000251827707475,0.1810931919182068
+32,kanpur_industrial,2026-08-16,26.575,80.375,0.000250407276149,0.1659986885083192
+33,kanpur_industrial,2026-08-16,26.575,80.475,0.0002495016098551,0.1266104274927737
+34,punjab_stubble_belt,2026-08-16,31.625,74.925,0.0002478537726877,0.1717177214805971
+35,punjab_stubble_belt,2026-08-16,31.625,74.775,0.0002470543997439,0.1733773330319842
+36,punjab_stubble_belt,2026-08-16,31.825,74.825,0.0002453922120776,0.1678632441082514
+37,punjab_stubble_belt,2026-08-16,31.675,74.625,0.0002438649718654,0.1787545967032595
+38,kanpur_industrial,2026-08-16,26.325,80.225,0.0002436707591948,0.1228126133633835
+39,kanpur_industrial,2026-08-16,26.525,80.525,0.0002431029776576,0.1430015295257552
+40,punjab_stubble_belt,2026-08-16,31.675,74.675,0.0002430924400488,0.1779173330440477
+41,punjab_stubble_belt,2026-08-16,31.625,74.825,0.0002420313574516,0.1775982532282951
+42,punjab_stubble_belt,2026-08-16,31.625,74.725,0.0002419375523436,0.1740813721722083
+43,kanpur_industrial,2026-08-16,26.425,80.475,0.0002411230913875,0.1666458878549017
+44,punjab_stubble_belt,2026-08-16,31.325,75.275,0.0002391373945558,0.1558568608289742
+45,punjab_stubble_belt,2026-08-16,31.475,74.925,0.0002388002175045,0.1688371170005446
+46,punjab_stubble_belt,2026-08-16,31.575,74.975,0.0002375367151179,0.1752868799828348
+47,punjab_stubble_belt,2026-08-16,31.825,74.675,0.0002373011639407,0.152710579694429
+48,punjab_stubble_belt,2026-08-16,31.575,74.925,0.0002372799517782,0.170690473748916
+49,punjab_stubble_belt,2026-08-16,31.525,74.625,0.0002372733832411,0.1758666918938429
+50,punjab_stubble_belt,2026-08-16,31.875,74.625,0.0002368231116263,0.1388041452757366
+51,punjab_stubble_belt,2026-08-16,31.725,75.275,0.000236098444319,0.1413495567723944
+52,punjab_stubble_belt,2026-08-16,31.875,74.725,0.0002355612925871,0.1600268262763427
+53,punjab_stubble_belt,2026-08-16,31.875,74.775,0.000235474509712,0.1571993632658063
+54,punjab_stubble_belt,2026-08-16,31.825,74.625,0.0002354516302103,0.1384388580140265
+55,kanpur_industrial,2026-08-16,26.475,80.525,0.0002348841180329,0.1483019534226052
+56,punjab_stubble_belt,2026-08-16,31.625,74.875,0.0002348649664934,0.1827431321508974
+57,kanpur_industrial,2026-08-16,26.475,80.55,0.0002332843153435,0.1495699395010587
+58,kanpur_industrial,2026-08-16,26.475,80.325,0.0002321027690162,0.1709621467313553
+59,kanpur_industrial,2026-08-16,26.525,80.55,0.0002318239537224,0.1529480245359775
+60,punjab_stubble_belt,2026-08-16,31.825,74.925,0.0002317869971656,0.1799143490932467
+61,punjab_stubble_belt,2026-08-16,31.775,75.3,0.0002316227972783,0.1321116067128948
+62,punjab_stubble_belt,2026-08-16,31.875,74.975,0.0002315033584869,0.1871232375828055
+63,punjab_stubble_belt,2026-08-16,31.875,74.825,0.0002301476707249,0.1571546465567594
+64,punjab_stubble_belt,2026-08-16,31.875,75.025,0.0002298945602282,0.1794506801383528
+65,kanpur_industrial,2026-08-16,26.575,80.175,0.0002297491650719,0.1542427771893317
+66,punjab_stubble_belt,2026-08-16,31.475,74.875,0.0002296633306194,0.1624395331570313
+67,kanpur_industrial,2026-08-16,26.425,80.375,0.0002292088266935,0.1571851185108835
+68,punjab_stubble_belt,2026-08-16,31.475,74.825,0.000229078823661,0.1572419875381598
+69,punjab_stubble_belt,2026-08-16,31.875,74.875,0.000227532883295,0.1631196339191416`;
+
+function parseRanked(csv){
+  const lines = csv.trim().split("\n");
+  const header = lines[0].split(",");
+  return lines.slice(1).map(line=>{
+    const vals = line.split(",");
+    const row = {};
+    header.forEach((h,i)=> row[h] = vals[i]);
+    return {
+      rank:+row.hotspot_rank, region:row.region_id, date:row.date,
+      lat:+row.lat, lon:+row.lon,
+      hcho:+row.hcho_value_calibrated, cloud_fraction:+row.cloud_fraction,
+    };
+  });
+}
+const HOTSPOTS = parseRanked(RANKED_CSV);
+const OBS_DATE = HOTSPOTS[0]?.date || "—";
+
+function hotspotsFor(regionKey){
+  return HOTSPOTS.filter(h=>h.region===regionKey).sort((a,b)=>b.hcho-a.hcho);
+}
+
+// ── MAP ──
+const map = L.map('map',{zoomControl:true, attributionControl:false}).setView(REGIONS.delhi_ncr.center, REGIONS.delhi_ncr.zoom);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
+let markers = [];
+let bboxRects = [];
+Object.entries(REGIONS).forEach(([key,cfg])=>{
+  const [minLon,minLat,maxLon,maxLat] = cfg.bbox;
+  bboxRects.push({key, rect: L.rectangle([[minLat,minLon],[maxLat,maxLon]],{color:'#8a968d',weight:1,fill:false}).addTo(map)});
+});
+
+function renderMap(regionKey){
+  markers.forEach(m=>map.removeLayer(m)); markers=[];
+  bboxRects.forEach(b=> b.rect.setStyle({color: b.key===regionKey ? '#c9552e':'#8a968d', weight: b.key===regionKey?2:1}));
+  const pts = hotspotsFor(regionKey);
+  if(pts.length===0) return; // e.g. Delhi-NCR — zero flagged cells right now
+  const maxHcho = pts[0].hcho;
+  pts.forEach(p=>{
+    const severity = p.hcho / maxHcho; // 0-1 relative to this region's worst cell
+    const m = L.circleMarker([p.lat,p.lon],{
+      radius: 5 + severity*7,
+      color:'#c9552e', fillColor:'#c9552e',
+      fillOpacity: 0.4 + severity*0.4, weight:1
+    }).bindPopup(`Rank #${p.rank}<br>HCHO ${p.hcho.toFixed(6)} mol/m²<br>Cloud fraction ${(p.cloud_fraction*100).toFixed(0)}%`);
+    m.addTo(map); markers.push(m);
+  });
+}
+
+// ── TABS ──
+const tabsEl = document.getElementById('regionTabs');
+let currentRegion = 'delhi_ncr';
+Object.entries(REGIONS).forEach(([key,cfg])=>{
+  const tab = document.createElement('div');
+  tab.className = 'monitor-tab'+(key===currentRegion?' active':'');
+  tab.innerHTML = `<span class="dotstat"></span>${cfg.label}`;
+  tab.onclick = ()=>{ currentRegion=key;
+    document.querySelectorAll('.monitor-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    map.flyTo(cfg.center, cfg.zoom, {duration:.6});
+    update();
+  };
+  tabsEl.appendChild(tab);
+});
+
+// ── CHARTS ──
+Chart.defaults.color = '#65716a';
+Chart.defaults.font.family = "'SFMono-Regular', Consolas, monospace";
+Chart.defaults.font.size = 10;
+const gridOpt = { color:'rgba(25,37,34,.09)' };
+
+const trendChart = new Chart(document.getElementById('trendChart'), {
+  type:'bar',
+  data:{ labels:[], datasets:[
+    {label:'HCHO', data:[], backgroundColor:'#39745e', borderRadius:0},
+  ]},
+  options:{ responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{ x:{grid:gridOpt, ticks:{maxTicksLimit:10}}, y:{grid:gridOpt, ticks:{callback:v=>v.toExponential(1)}} } }
+});
+const anomalyChart = new Chart(document.getElementById('anomalyChart'), {
+  type:'bar',
+  data:{ labels:[], datasets:[{ label:'Grid flagged %', data:[], backgroundColor:'#8a968d', borderRadius:0 }]},
+  options:{ responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{ x:{grid:gridOpt}, y:{grid:gridOpt, max:50} } }
+});
+
+// ── UPDATE ──
+function update(){
+  const s = SUMMARY[currentRegion];
+  const pts = hotspotsFor(currentRegion);
+
+  document.getElementById('kpiHcho').textContent = s.mean_hcho.toExponential(2);
+  document.getElementById('kpiAnomaly').textContent = s.max_hcho.toExponential(2);
+  document.getElementById('kpiHotspots').textContent = `${s.hotspot_count} / ${s.total_grid_points}`;
+  document.getElementById('kpiBaseline').textContent = s.hotspot_pct.toFixed(1)+'%';
+  document.getElementById('dateLabel').textContent = OBS_DATE;
+
+  const advisory = document.getElementById('advisoryText');
+  if(s.hotspot_count===0){
+    advisory.innerHTML = `No hotspot cells flagged in ${REGIONS[currentRegion].label} for this pass — all ${s.total_grid_points} monitored grid points fall within normal range.`;
+  } else {
+    const worst = pts[0];
+    advisory.innerHTML = `<b>${s.hotspot_count} of ${s.total_grid_points} grid cells (${s.hotspot_pct.toFixed(1)}%)</b> flagged as hotspots in ${REGIONS[currentRegion].label}. Most severe cell: rank #${worst.rank} at ${worst.lat.toFixed(3)}, ${worst.lon.toFixed(3)}, HCHO ${worst.hcho.toExponential(2)} mol/m².`;
+  }
+
+  renderMap(currentRegion);
+
+  // Chart 1 — top ranked hotspot cells in this region (real data, capped at 10 for readability)
+  const top = pts.slice(0,10);
+  trendChart.data.labels = top.map(p=>`#${p.rank}`);
+  trendChart.data.datasets[0].data = top.map(p=>p.hcho);
+  trendChart.update('none');
+
+  // Chart 2 — hotspot % across all regions, static context, current region highlighted
+  const regionKeys = Object.keys(REGIONS);
+  anomalyChart.data.labels = regionKeys.map(k=>REGIONS[k].label);
+  anomalyChart.data.datasets[0].data = regionKeys.map(k=>SUMMARY[k].hotspot_pct);
+  anomalyChart.data.datasets[0].backgroundColor = regionKeys.map(k=> k===currentRegion ? '#c9552e' : '#8a968d');
+  anomalyChart.update('none');
+}
+update();
+
+// Scroll choreography: one calm reveal per section, no looping card effects.
+const revealTargets = [
+  document.querySelector('.hero-content'),
+  document.querySelector('#gap .gap-layout'),
+  document.querySelector('#pipeline .pipeline'),
+  document.querySelector('#monitor .monitor-shell')
+].filter(Boolean);
+revealTargets.forEach(el=>el.classList.add(el.classList.contains('pipeline') ? 'reveal-stagger' : 'reveal'));
+
+const gapVisual = document.querySelector('.gap-visual');
+if(gapVisual){
+  gapVisual.classList.add('animate-bars');
+  gapVisual.querySelectorAll('.coverage-fill').forEach(bar=>{
+    bar.style.setProperty('--target-width', bar.style.width);
+  });
+}
+
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const observer = new IntersectionObserver((entries, io)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+    });
+  },{threshold:.16});
+  revealTargets.forEach(el=>observer.observe(el));
+  if(gapVisual) observer.observe(gapVisual);
+} else {
+  revealTargets.forEach(el=>el.classList.add('is-visible'));
+  if(gapVisual) gapVisual.classList.add('is-visible');
+}
+</script>
+<script src="dashboard.js"></script>
+</body>
+</html>

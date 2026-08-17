@@ -1,0 +1,4 @@
+region_id,total_grid_points,hotspot_count,mean_calibrated_hcho,max_calibrated_hcho,hotspot_pct
+kanpur_industrial,53,22,0.00021098932297157168,0.0002775220694,41.5
+punjab_stubble_belt,178,47,0.00021247110699988312,0.0003230039410378,26.4
+delhi_ncr,174,0,0.00011230741289629952,0.0001614764351009,0.0
