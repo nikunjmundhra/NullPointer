@@ -1,0 +1,19 @@
+{
+  "historical": {
+    "cross_season": false,
+    "cv_r2": 0.1436,
+    "n_calibration_pairs": 209,
+    "n_offset_correction_pairs": 0,
+    "n_hotspots": 548,
+    "n_grid_cells": 11538
+  },
+  "live": {
+    "cross_season": true,
+    "trained_on": "historical",
+    "cv_r2": 0.1436,
+    "n_calibration_pairs": 209,
+    "n_offset_correction_pairs": 62,
+    "n_hotspots": 8,
+    "n_grid_cells": 3581
+  }
+}
