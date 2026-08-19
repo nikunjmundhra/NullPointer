@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "historical",
+  "generated_at": "2026-08-19T11:06:48.244026+00:00",
+  "regions": [
+    "delhi_ncr",
+    "kanpur_industrial",
+    "punjab_stubble_belt"
+  ],
+  "date_range": [
+    "2025-10-15",
+    "2025-11-15"
+  ],
+  "n_hotspots": 548,
+  "n_grid_cells": 11538,
+  "calibration": {
+    "cross_season": false,
+    "cv_r2": 0.1436,
+    "n_calibration_pairs": 209,
+    "n_offset_correction_pairs": 0,
+    "n_hotspots": 548,
+    "n_grid_cells": 11538
+  },
+  "severity_counts": {
+    "Poor": 302,
+    "Very Poor": 236,
+    "Severe": 10
+  }
+}
