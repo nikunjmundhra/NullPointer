@@ -1,0 +1,549 @@
+hotspot_id,region_id,date,centroid_lat,centroid_lon,avg_estimated_aqi,max_estimated_aqi,severity,affected_cell_count
+HS_delhi_ncr_2025-10-15_001,delhi_ncr,2025-10-15,28.475,76.8786,231.3,263.2,Poor,14
+HS_delhi_ncr_2025-10-15_002,delhi_ncr,2025-10-15,28.4976,77.1073,255.3,335.3,Very Poor,31
+HS_delhi_ncr_2025-10-15_003,delhi_ncr,2025-10-15,28.4908,77.4086,266.3,338.2,Very Poor,38
+HS_delhi_ncr_2025-10-15_004,delhi_ncr,2025-10-15,28.85,76.925,211.6,214.5,Poor,2
+HS_delhi_ncr_2025-10-15_005,delhi_ncr,2025-10-15,28.785,77.12,231.9,320.1,Very Poor,20
+HS_delhi_ncr_2025-10-15_006,delhi_ncr,2025-10-15,28.7875,77.4036,237.5,315.3,Very Poor,28
+HS_delhi_ncr_2025-10-16_007,delhi_ncr,2025-10-16,28.4673,76.8788,231.2,275.1,Poor,13
+HS_delhi_ncr_2025-10-16_008,delhi_ncr,2025-10-16,28.4947,77.1023,248.1,297.9,Poor,33
+HS_delhi_ncr_2025-10-16_009,delhi_ncr,2025-10-16,28.5012,77.4206,290.7,440.4,Severe,40
+HS_delhi_ncr_2025-10-16_010,delhi_ncr,2025-10-16,28.7188,76.8812,224.8,268.4,Poor,8
+HS_delhi_ncr_2025-10-16_011,delhi_ncr,2025-10-16,28.769,77.099,231.3,292.7,Poor,25
+HS_delhi_ncr_2025-10-16_012,delhi_ncr,2025-10-16,28.7558,77.4308,232.6,309.0,Very Poor,26
+HS_delhi_ncr_2025-10-17_013,delhi_ncr,2025-10-17,28.4635,76.875,240.0,297.6,Poor,13
+HS_delhi_ncr_2025-10-17_014,delhi_ncr,2025-10-17,28.5,77.1,280.7,395.4,Very Poor,36
+HS_delhi_ncr_2025-10-17_015,delhi_ncr,2025-10-17,28.4982,77.4183,328.1,407.4,Severe,41
+HS_delhi_ncr_2025-10-17_016,delhi_ncr,2025-10-17,28.7917,76.8806,237.0,284.7,Poor,9
+HS_delhi_ncr_2025-10-17_017,delhi_ncr,2025-10-17,28.775,77.1,286.8,387.1,Very Poor,30
+HS_delhi_ncr_2025-10-17_018,delhi_ncr,2025-10-17,28.7735,77.4176,279.1,348.5,Very Poor,34
+HS_delhi_ncr_2025-10-18_019,delhi_ncr,2025-10-18,28.5,76.875,265.2,290.4,Poor,18
+HS_delhi_ncr_2025-10-18_020,delhi_ncr,2025-10-18,28.5,77.1,283.3,328.0,Very Poor,36
+HS_delhi_ncr_2025-10-18_021,delhi_ncr,2025-10-18,28.4982,77.4183,320.6,382.1,Very Poor,41
+HS_delhi_ncr_2025-10-18_022,delhi_ncr,2025-10-18,28.775,76.875,243.4,287.4,Poor,15
+HS_delhi_ncr_2025-10-18_023,delhi_ncr,2025-10-18,28.775,77.1,289.7,331.5,Very Poor,30
+HS_delhi_ncr_2025-10-18_024,delhi_ncr,2025-10-18,28.7735,77.4176,286.2,362.5,Very Poor,34
+HS_delhi_ncr_2025-10-19_025,delhi_ncr,2025-10-19,28.4714,76.8821,266.3,293.8,Poor,14
+HS_delhi_ncr_2025-10-19_026,delhi_ncr,2025-10-19,28.5,77.1,318.9,370.1,Very Poor,36
+HS_delhi_ncr_2025-10-19_027,delhi_ncr,2025-10-19,28.4982,77.4183,311.3,380.7,Very Poor,41
+HS_delhi_ncr_2025-10-19_028,delhi_ncr,2025-10-19,28.7812,76.9,243.0,326.9,Very Poor,8
+HS_delhi_ncr_2025-10-19_029,delhi_ncr,2025-10-19,28.775,77.1,295.1,372.8,Very Poor,30
+HS_delhi_ncr_2025-10-19_030,delhi_ncr,2025-10-19,28.7735,77.4176,274.3,315.5,Very Poor,34
+HS_delhi_ncr_2025-10-20_031,delhi_ncr,2025-10-20,28.4985,76.875,294.7,320.5,Very Poor,17
+HS_delhi_ncr_2025-10-20_032,delhi_ncr,2025-10-20,28.4953,77.1109,291.3,392.2,Very Poor,32
+HS_delhi_ncr_2025-10-20_033,delhi_ncr,2025-10-20,28.5129,77.3819,296.6,357.9,Very Poor,29
+HS_delhi_ncr_2025-10-20_034,delhi_ncr,2025-10-20,28.775,76.875,294.7,354.4,Very Poor,15
+HS_delhi_ncr_2025-10-20_035,delhi_ncr,2025-10-20,28.775,77.1,337.3,411.3,Severe,30
+HS_delhi_ncr_2025-10-20_036,delhi_ncr,2025-10-20,28.7797,77.418,296.8,352.9,Very Poor,32
+HS_delhi_ncr_2025-10-21_037,delhi_ncr,2025-10-21,28.5019,76.8788,305.2,340.2,Very Poor,13
+HS_delhi_ncr_2025-10-21_038,delhi_ncr,2025-10-21,28.5083,77.1271,257.7,275.3,Poor,24
+HS_delhi_ncr_2025-10-21_039,delhi_ncr,2025-10-21,28.47,77.445,257.3,290.4,Poor,20
+HS_delhi_ncr_2025-10-21_040,delhi_ncr,2025-10-21,28.775,76.875,252.5,269.6,Poor,15
+HS_delhi_ncr_2025-10-21_041,delhi_ncr,2025-10-21,28.765,77.055,249.8,269.0,Poor,15
+HS_delhi_ncr_2025-10-21_042,delhi_ncr,2025-10-21,28.7714,77.3982,272.8,290.0,Poor,14
+HS_delhi_ncr_2025-10-22_043,delhi_ncr,2025-10-22,28.525,76.875,275.4,302.8,Very Poor,15
+HS_delhi_ncr_2025-10-22_044,delhi_ncr,2025-10-22,28.565,76.985,250.4,261.8,Poor,5
+HS_delhi_ncr_2025-10-22_045,delhi_ncr,2025-10-22,28.775,76.875,260.1,328.8,Very Poor,15
+HS_delhi_ncr_2025-10-22_046,delhi_ncr,2025-10-22,28.7821,77.0214,246.6,263.4,Poor,14
+HS_delhi_ncr_2025-10-23_047,delhi_ncr,2025-10-23,28.5,76.875,246.5,278.3,Poor,18
+HS_delhi_ncr_2025-10-23_048,delhi_ncr,2025-10-23,28.5,77.1,271.4,328.8,Very Poor,36
+HS_delhi_ncr_2025-10-23_049,delhi_ncr,2025-10-23,28.4982,77.4183,287.5,339.8,Very Poor,41
+HS_delhi_ncr_2025-10-23_050,delhi_ncr,2025-10-23,28.775,76.875,237.3,290.6,Poor,15
+HS_delhi_ncr_2025-10-23_051,delhi_ncr,2025-10-23,28.7733,77.1043,264.8,309.6,Very Poor,29
+HS_delhi_ncr_2025-10-23_052,delhi_ncr,2025-10-23,28.7735,77.4176,261.1,331.9,Very Poor,34
+HS_delhi_ncr_2025-10-24_053,delhi_ncr,2025-10-24,28.4375,76.875,206.8,220.4,Poor,8
+HS_delhi_ncr_2025-10-24_054,delhi_ncr,2025-10-24,28.5202,77.1464,233.8,272.3,Poor,21
+HS_delhi_ncr_2025-10-24_055,delhi_ncr,2025-10-24,28.4982,77.4183,300.1,355.9,Very Poor,41
+HS_delhi_ncr_2025-10-24_056,delhi_ncr,2025-10-24,28.7806,76.8639,244.4,262.7,Poor,9
+HS_delhi_ncr_2025-10-24_057,delhi_ncr,2025-10-24,28.7808,77.1058,253.7,342.5,Very Poor,26
+HS_delhi_ncr_2025-10-24_058,delhi_ncr,2025-10-24,28.7735,77.4189,289.7,351.8,Very Poor,33
+HS_delhi_ncr_2025-10-25_059,delhi_ncr,2025-10-25,28.4956,76.875,300.8,374.5,Very Poor,17
+HS_delhi_ncr_2025-10-25_060,delhi_ncr,2025-10-25,28.5,77.1,328.9,444.0,Severe,36
+HS_delhi_ncr_2025-10-25_061,delhi_ncr,2025-10-25,28.4982,77.4183,320.7,403.1,Severe,41
+HS_delhi_ncr_2025-10-25_062,delhi_ncr,2025-10-25,28.775,76.875,267.9,311.9,Very Poor,15
+HS_delhi_ncr_2025-10-25_063,delhi_ncr,2025-10-25,28.775,77.1,334.6,435.6,Severe,30
+HS_delhi_ncr_2025-10-25_064,delhi_ncr,2025-10-25,28.7735,77.4176,293.1,361.4,Very Poor,34
+HS_delhi_ncr_2025-10-26_065,delhi_ncr,2025-10-26,28.4983,76.8783,228.5,264.7,Poor,15
+HS_delhi_ncr_2025-10-26_066,delhi_ncr,2025-10-26,28.517,77.093,243.3,314.4,Very Poor,25
+HS_delhi_ncr_2025-10-26_067,delhi_ncr,2025-10-26,28.4988,77.4194,255.3,348.5,Very Poor,40
+HS_delhi_ncr_2025-10-26_068,delhi_ncr,2025-10-26,28.775,76.875,295.2,347.5,Very Poor,15
+HS_delhi_ncr_2025-10-26_069,delhi_ncr,2025-10-26,28.7694,77.0972,276.9,342.7,Very Poor,27
+HS_delhi_ncr_2025-10-26_070,delhi_ncr,2025-10-26,28.7708,77.3792,248.0,328.9,Very Poor,12
+HS_delhi_ncr_2025-10-29_071,delhi_ncr,2025-10-29,28.875,77.5375,275.0,275.0,Poor,2
+HS_delhi_ncr_2025-10-30_072,delhi_ncr,2025-10-30,28.85,77.225,331.4,331.4,Very Poor,2
+HS_delhi_ncr_2025-10-30_073,delhi_ncr,2025-10-30,28.8205,77.3341,270.3,348.5,Very Poor,11
+HS_delhi_ncr_2025-10-31_074,delhi_ncr,2025-10-31,28.5159,76.8614,239.5,265.7,Poor,11
+HS_delhi_ncr_2025-10-31_075,delhi_ncr,2025-10-31,28.5036,77.1036,255.1,330.9,Very Poor,35
+HS_delhi_ncr_2025-10-31_076,delhi_ncr,2025-10-31,28.5012,77.415,312.5,388.1,Very Poor,40
+HS_delhi_ncr_2025-10-31_077,delhi_ncr,2025-10-31,28.7712,76.8788,238.0,291.2,Poor,13
+HS_delhi_ncr_2025-10-31_078,delhi_ncr,2025-10-31,28.775,77.0991,287.3,347.4,Very Poor,29
+HS_delhi_ncr_2025-10-31_079,delhi_ncr,2025-10-31,28.7735,77.4176,278.5,348.7,Very Poor,34
+HS_delhi_ncr_2025-11-01_080,delhi_ncr,2025-11-01,28.4667,77.1083,321.6,384.8,Very Poor,12
+HS_delhi_ncr_2025-11-01_081,delhi_ncr,2025-11-01,28.51,77.4542,359.7,394.9,Very Poor,30
+HS_delhi_ncr_2025-11-01_082,delhi_ncr,2025-11-01,28.875,76.875,289.8,318.8,Very Poor,3
+HS_delhi_ncr_2025-11-01_083,delhi_ncr,2025-11-01,28.7812,77.1125,312.6,360.0,Very Poor,16
+HS_delhi_ncr_2025-11-01_084,delhi_ncr,2025-11-01,28.7654,77.4385,329.6,371.1,Very Poor,26
+HS_delhi_ncr_2025-11-02_085,delhi_ncr,2025-11-02,28.5,76.875,294.5,354.8,Very Poor,18
+HS_delhi_ncr_2025-11-02_086,delhi_ncr,2025-11-02,28.5,77.1,258.0,298.0,Poor,36
+HS_delhi_ncr_2025-11-02_087,delhi_ncr,2025-11-02,28.5012,77.4194,267.5,332.2,Very Poor,40
+HS_delhi_ncr_2025-11-02_088,delhi_ncr,2025-11-02,28.775,76.875,260.6,318.8,Very Poor,15
+HS_delhi_ncr_2025-11-02_089,delhi_ncr,2025-11-02,28.775,77.1,258.7,306.1,Very Poor,30
+HS_delhi_ncr_2025-11-02_090,delhi_ncr,2025-11-02,28.7702,77.4282,263.8,374.8,Very Poor,31
+HS_delhi_ncr_2025-11-03_091,delhi_ncr,2025-11-03,28.48,76.865,216.1,219.3,Poor,10
+HS_delhi_ncr_2025-11-03_092,delhi_ncr,2025-11-03,28.5229,77.1229,231.2,259.6,Poor,24
+HS_delhi_ncr_2025-11-03_093,delhi_ncr,2025-11-03,28.5006,77.4231,250.3,331.0,Very Poor,39
+HS_delhi_ncr_2025-11-03_094,delhi_ncr,2025-11-03,28.7861,76.8917,231.4,243.4,Poor,9
+HS_delhi_ncr_2025-11-03_095,delhi_ncr,2025-11-03,28.775,77.1,258.5,305.0,Very Poor,30
+HS_delhi_ncr_2025-11-03_096,delhi_ncr,2025-11-03,28.7735,77.4144,285.8,393.2,Very Poor,33
+HS_delhi_ncr_2025-11-04_097,delhi_ncr,2025-11-04,28.545,76.89,252.9,330.2,Very Poor,10
+HS_delhi_ncr_2025-11-04_098,delhi_ncr,2025-11-04,28.5107,77.0768,237.7,313.7,Very Poor,28
+HS_delhi_ncr_2025-11-04_099,delhi_ncr,2025-11-04,28.5026,77.3983,227.2,249.9,Poor,29
+HS_delhi_ncr_2025-11-04_100,delhi_ncr,2025-11-04,28.7708,76.8833,234.7,265.3,Poor,12
+HS_delhi_ncr_2025-11-04_101,delhi_ncr,2025-11-04,28.7694,77.0917,241.2,304.4,Very Poor,27
+HS_delhi_ncr_2025-11-04_102,delhi_ncr,2025-11-04,28.7806,77.4306,231.0,290.9,Poor,27
+HS_delhi_ncr_2025-11-05_103,delhi_ncr,2025-11-05,28.5583,76.925,224.0,246.5,Poor,3
+HS_delhi_ncr_2025-11-05_104,delhi_ncr,2025-11-05,28.5216,77.1147,248.0,306.3,Very Poor,29
+HS_delhi_ncr_2025-11-05_105,delhi_ncr,2025-11-05,28.5012,77.4206,295.8,372.5,Very Poor,40
+HS_delhi_ncr_2025-11-05_106,delhi_ncr,2025-11-05,28.8028,76.8861,253.4,291.5,Poor,9
+HS_delhi_ncr_2025-11-05_107,delhi_ncr,2025-11-05,28.7713,77.0954,244.2,308.8,Very Poor,27
+HS_delhi_ncr_2025-11-05_108,delhi_ncr,2025-11-05,28.7672,77.4148,271.2,358.8,Very Poor,32
+HS_delhi_ncr_2025-11-06_109,delhi_ncr,2025-11-06,28.4865,76.8788,224.9,254.5,Poor,13
+HS_delhi_ncr_2025-11-06_110,delhi_ncr,2025-11-06,28.5163,77.1185,234.4,299.9,Poor,23
+HS_delhi_ncr_2025-11-06_111,delhi_ncr,2025-11-06,28.4971,77.4272,248.4,341.7,Very Poor,34
+HS_delhi_ncr_2025-11-06_112,delhi_ncr,2025-11-06,28.7821,76.875,230.9,262.4,Poor,7
+HS_delhi_ncr_2025-11-06_113,delhi_ncr,2025-11-06,28.7818,77.0795,222.6,287.0,Poor,22
+HS_delhi_ncr_2025-11-06_114,delhi_ncr,2025-11-06,28.7769,77.4167,223.4,276.1,Poor,27
+HS_delhi_ncr_2025-11-07_115,delhi_ncr,2025-11-07,28.5607,76.8679,226.4,261.8,Poor,7
+HS_delhi_ncr_2025-11-07_116,delhi_ncr,2025-11-07,28.499,77.087,228.3,263.7,Poor,25
+HS_delhi_ncr_2025-11-07_117,delhi_ncr,2025-11-07,28.5042,77.4368,270.1,356.3,Very Poor,36
+HS_delhi_ncr_2025-11-07_118,delhi_ncr,2025-11-07,28.725,76.8679,251.7,303.7,Very Poor,7
+HS_delhi_ncr_2025-11-07_119,delhi_ncr,2025-11-07,28.7641,77.125,261.2,317.1,Very Poor,23
+HS_delhi_ncr_2025-11-07_120,delhi_ncr,2025-11-07,28.7625,77.408,251.7,309.2,Very Poor,28
+HS_delhi_ncr_2025-11-08_121,delhi_ncr,2025-11-08,28.5,76.875,261.1,332.1,Very Poor,18
+HS_delhi_ncr_2025-11-08_122,delhi_ncr,2025-11-08,28.4992,77.0895,290.6,371.5,Very Poor,31
+HS_delhi_ncr_2025-11-08_123,delhi_ncr,2025-11-08,28.4982,77.4183,293.9,374.7,Very Poor,41
+HS_delhi_ncr_2025-11-08_124,delhi_ncr,2025-11-08,28.775,76.875,273.4,319.1,Very Poor,15
+HS_delhi_ncr_2025-11-08_125,delhi_ncr,2025-11-08,28.775,77.1,275.0,322.1,Very Poor,30
+HS_delhi_ncr_2025-11-08_126,delhi_ncr,2025-11-08,28.7735,77.4176,262.3,367.0,Very Poor,34
+HS_delhi_ncr_2025-11-09_127,delhi_ncr,2025-11-09,28.5,76.8821,251.6,275.8,Poor,14
+HS_delhi_ncr_2025-11-09_128,delhi_ncr,2025-11-09,28.5,77.0926,247.3,291.4,Poor,34
+HS_delhi_ncr_2025-11-09_129,delhi_ncr,2025-11-09,28.5034,77.4257,267.4,333.5,Very Poor,37
+HS_delhi_ncr_2025-11-09_130,delhi_ncr,2025-11-09,28.775,76.875,269.9,322.3,Very Poor,15
+HS_delhi_ncr_2025-11-09_131,delhi_ncr,2025-11-09,28.7825,77.0675,263.2,315.0,Very Poor,20
+HS_delhi_ncr_2025-11-09_132,delhi_ncr,2025-11-09,28.7635,77.4288,249.7,366.5,Very Poor,26
+HS_delhi_ncr_2025-11-10_133,delhi_ncr,2025-11-10,28.5,76.875,292.9,357.7,Very Poor,18
+HS_delhi_ncr_2025-11-10_134,delhi_ncr,2025-11-10,28.5,77.1,298.8,378.9,Very Poor,36
+HS_delhi_ncr_2025-11-10_135,delhi_ncr,2025-11-10,28.4982,77.4183,300.0,375.5,Very Poor,41
+HS_delhi_ncr_2025-11-10_136,delhi_ncr,2025-11-10,28.775,76.875,314.1,384.7,Very Poor,15
+HS_delhi_ncr_2025-11-10_137,delhi_ncr,2025-11-10,28.775,77.1,276.6,373.4,Very Poor,30
+HS_delhi_ncr_2025-11-10_138,delhi_ncr,2025-11-10,28.7719,77.4133,275.2,357.3,Very Poor,32
+HS_delhi_ncr_2025-11-11_139,delhi_ncr,2025-11-11,28.5062,76.8688,241.5,311.7,Very Poor,16
+HS_delhi_ncr_2025-11-11_140,delhi_ncr,2025-11-11,28.5112,77.1043,255.6,318.4,Very Poor,29
+HS_delhi_ncr_2025-11-11_141,delhi_ncr,2025-11-11,28.4982,77.4183,267.9,348.2,Very Poor,41
+HS_delhi_ncr_2025-11-11_142,delhi_ncr,2025-11-11,28.775,76.8714,255.2,293.5,Poor,14
+HS_delhi_ncr_2025-11-11_143,delhi_ncr,2025-11-11,28.775,77.1,267.5,353.2,Very Poor,30
+HS_delhi_ncr_2025-11-11_144,delhi_ncr,2025-11-11,28.7669,77.4202,250.6,315.4,Very Poor,31
+HS_delhi_ncr_2025-11-12_145,delhi_ncr,2025-11-12,28.5,76.875,236.8,283.6,Poor,18
+HS_delhi_ncr_2025-11-12_146,delhi_ncr,2025-11-12,28.5196,77.0839,256.2,328.8,Very Poor,28
+HS_delhi_ncr_2025-11-12_147,delhi_ncr,2025-11-12,28.5012,77.4194,268.5,343.3,Very Poor,40
+HS_delhi_ncr_2025-11-12_148,delhi_ncr,2025-11-12,28.775,76.875,250.1,325.1,Very Poor,15
+HS_delhi_ncr_2025-11-12_149,delhi_ncr,2025-11-12,28.775,77.1,268.6,357.4,Very Poor,30
+HS_delhi_ncr_2025-11-12_150,delhi_ncr,2025-11-12,28.7735,77.4176,274.3,362.3,Very Poor,34
+HS_delhi_ncr_2025-11-13_151,delhi_ncr,2025-11-13,28.525,76.875,239.7,279.1,Poor,15
+HS_delhi_ncr_2025-11-13_152,delhi_ncr,2025-11-13,28.5015,77.1029,255.3,318.6,Very Poor,34
+HS_delhi_ncr_2025-11-13_153,delhi_ncr,2025-11-13,28.4982,77.4183,278.0,362.8,Very Poor,41
+HS_delhi_ncr_2025-11-13_154,delhi_ncr,2025-11-13,28.78,76.88,266.9,352.7,Very Poor,10
+HS_delhi_ncr_2025-11-13_155,delhi_ncr,2025-11-13,28.775,77.1,284.9,426.5,Severe,30
+HS_delhi_ncr_2025-11-13_156,delhi_ncr,2025-11-13,28.7735,77.4176,338.7,397.3,Very Poor,34
+HS_delhi_ncr_2025-11-14_157,delhi_ncr,2025-11-14,28.49,76.895,262.2,309.2,Very Poor,10
+HS_delhi_ncr_2025-11-14_158,delhi_ncr,2025-11-14,28.5029,77.0956,268.4,327.5,Very Poor,34
+HS_delhi_ncr_2025-11-14_159,delhi_ncr,2025-11-14,28.4982,77.4183,291.9,394.5,Very Poor,41
+HS_delhi_ncr_2025-11-14_160,delhi_ncr,2025-11-14,28.7786,76.8714,263.7,376.5,Very Poor,14
+HS_delhi_ncr_2025-11-14_161,delhi_ncr,2025-11-14,28.775,77.1,263.5,318.5,Very Poor,30
+HS_delhi_ncr_2025-11-14_162,delhi_ncr,2025-11-14,28.7589,77.3964,273.1,364.6,Very Poor,28
+HS_delhi_ncr_2025-11-15_163,delhi_ncr,2025-11-15,28.4985,76.8779,256.1,297.5,Poor,17
+HS_delhi_ncr_2025-11-15_164,delhi_ncr,2025-11-15,28.5029,77.0941,260.1,331.9,Very Poor,34
+HS_delhi_ncr_2025-11-15_165,delhi_ncr,2025-11-15,28.4947,77.4257,248.8,312.2,Very Poor,38
+HS_delhi_ncr_2025-11-15_166,delhi_ncr,2025-11-15,28.7788,76.875,237.6,315.6,Very Poor,13
+HS_delhi_ncr_2025-11-15_167,delhi_ncr,2025-11-15,28.7716,77.0991,252.7,314.0,Very Poor,29
+HS_delhi_ncr_2025-11-15_168,delhi_ncr,2025-11-15,28.7734,77.4094,261.8,336.4,Very Poor,32
+HS_kanpur_industrial_2025-10-15_169,kanpur_industrial,2025-10-15,26.4393,80.1964,212.5,222.4,Poor,7
+HS_kanpur_industrial_2025-10-15_170,kanpur_industrial,2025-10-15,26.4319,80.4284,219.5,268.3,Poor,29
+HS_kanpur_industrial_2025-10-15_171,kanpur_industrial,2025-10-15,26.575,80.225,207.7,207.7,Poor,1
+HS_kanpur_industrial_2025-10-15_172,kanpur_industrial,2025-10-15,26.575,80.4562,218.1,236.1,Poor,4
+HS_kanpur_industrial_2025-10-16_173,kanpur_industrial,2025-10-16,26.365,80.195,208.0,220.7,Poor,5
+HS_kanpur_industrial_2025-10-16_174,kanpur_industrial,2025-10-16,26.4025,80.425,216.8,269.3,Poor,20
+HS_kanpur_industrial_2025-10-16_175,kanpur_industrial,2025-10-16,26.575,80.175,202.6,202.6,Poor,1
+HS_kanpur_industrial_2025-10-16_176,kanpur_industrial,2025-10-16,26.575,80.55,201.3,201.3,Poor,1
+HS_kanpur_industrial_2025-10-17_177,kanpur_industrial,2025-10-17,26.465,80.195,216.7,237.6,Poor,5
+HS_kanpur_industrial_2025-10-17_178,kanpur_industrial,2025-10-17,26.4288,80.4135,225.3,277.7,Poor,26
+HS_kanpur_industrial_2025-10-17_179,kanpur_industrial,2025-10-17,26.575,80.2,255.3,259.8,Poor,2
+HS_kanpur_industrial_2025-10-17_180,kanpur_industrial,2025-10-17,26.575,80.41,228.2,255.6,Poor,5
+HS_kanpur_industrial_2025-10-18_181,kanpur_industrial,2025-10-18,26.425,80.2,245.0,283.2,Poor,10
+HS_kanpur_industrial_2025-10-18_182,kanpur_industrial,2025-10-18,26.4265,80.4176,264.3,310.1,Very Poor,34
+HS_kanpur_industrial_2025-10-18_183,kanpur_industrial,2025-10-18,26.575,80.2,243.2,255.0,Poor,2
+HS_kanpur_industrial_2025-10-18_184,kanpur_industrial,2025-10-18,26.575,80.4214,256.6,274.3,Poor,7
+HS_kanpur_industrial_2025-10-19_185,kanpur_industrial,2025-10-19,26.4306,80.1972,240.2,261.1,Poor,9
+HS_kanpur_industrial_2025-10-19_186,kanpur_industrial,2025-10-19,26.4295,80.4144,255.0,308.1,Very Poor,33
+HS_kanpur_industrial_2025-10-19_187,kanpur_industrial,2025-10-19,26.575,80.2,225.2,229.9,Poor,2
+HS_kanpur_industrial_2025-10-19_188,kanpur_industrial,2025-10-19,26.575,80.4214,260.2,294.9,Poor,7
+HS_kanpur_industrial_2025-10-20_189,kanpur_industrial,2025-10-20,26.4375,80.2,239.9,268.1,Poor,8
+HS_kanpur_industrial_2025-10-20_190,kanpur_industrial,2025-10-20,26.4212,80.3923,219.6,266.7,Poor,26
+HS_kanpur_industrial_2025-10-20_191,kanpur_industrial,2025-10-20,26.575,80.2,227.3,234.6,Poor,2
+HS_kanpur_industrial_2025-10-20_192,kanpur_industrial,2025-10-20,26.575,80.4214,218.0,230.0,Poor,7
+HS_kanpur_industrial_2025-10-22_193,kanpur_industrial,2025-10-22,26.525,80.5167,256.0,256.0,Poor,3
+HS_kanpur_industrial_2025-10-22_194,kanpur_industrial,2025-10-22,26.575,80.4458,250.7,256.8,Poor,6
+HS_kanpur_industrial_2025-10-24_195,kanpur_industrial,2025-10-24,26.425,80.2,239.5,250.8,Poor,10
+HS_kanpur_industrial_2025-10-24_196,kanpur_industrial,2025-10-24,26.4265,80.4176,246.6,298.1,Poor,34
+HS_kanpur_industrial_2025-10-24_197,kanpur_industrial,2025-10-24,26.575,80.2,284.7,295.1,Poor,2
+HS_kanpur_industrial_2025-10-24_198,kanpur_industrial,2025-10-24,26.575,80.4214,262.0,288.4,Poor,7
+HS_kanpur_industrial_2025-10-25_199,kanpur_industrial,2025-10-25,26.475,80.2,214.2,220.3,Poor,6
+HS_kanpur_industrial_2025-10-25_200,kanpur_industrial,2025-10-25,26.4267,80.4353,234.0,270.3,Poor,29
+HS_kanpur_industrial_2025-10-25_201,kanpur_industrial,2025-10-25,26.575,80.2,220.6,231.1,Poor,2
+HS_kanpur_industrial_2025-10-25_202,kanpur_industrial,2025-10-25,26.575,80.45,266.1,304.5,Very Poor,5
+HS_kanpur_industrial_2025-10-26_203,kanpur_industrial,2025-10-26,26.425,80.1964,219.6,251.3,Poor,7
+HS_kanpur_industrial_2025-10-26_204,kanpur_industrial,2025-10-26,26.4312,80.426,227.7,277.2,Poor,24
+HS_kanpur_industrial_2025-10-26_205,kanpur_industrial,2025-10-26,26.575,80.2,208.4,211.7,Poor,2
+HS_kanpur_industrial_2025-10-26_206,kanpur_industrial,2025-10-26,26.575,80.4375,227.8,239.7,Poor,6
+HS_kanpur_industrial_2025-10-29_207,kanpur_industrial,2025-10-29,26.4875,80.4667,259.3,296.4,Poor,12
+HS_kanpur_industrial_2025-10-29_208,kanpur_industrial,2025-10-29,26.575,80.4937,279.7,296.4,Poor,4
+HS_kanpur_industrial_2025-11-01_209,kanpur_industrial,2025-11-01,26.4361,80.1972,217.3,234.8,Poor,9
+HS_kanpur_industrial_2025-11-01_210,kanpur_industrial,2025-11-01,26.4328,80.4187,241.2,284.2,Poor,32
+HS_kanpur_industrial_2025-11-01_211,kanpur_industrial,2025-11-01,26.575,80.2,228.2,229.5,Poor,2
+HS_kanpur_industrial_2025-11-01_212,kanpur_industrial,2025-11-01,26.575,80.4214,243.1,272.8,Poor,7
+HS_kanpur_industrial_2025-11-02_213,kanpur_industrial,2025-11-02,26.425,80.2,263.1,278.3,Poor,10
+HS_kanpur_industrial_2025-11-02_214,kanpur_industrial,2025-11-02,26.4312,80.4172,264.2,304.4,Very Poor,32
+HS_kanpur_industrial_2025-11-02_215,kanpur_industrial,2025-11-02,26.575,80.2,278.8,295.2,Poor,2
+HS_kanpur_industrial_2025-11-02_216,kanpur_industrial,2025-11-02,26.575,80.4214,262.4,290.3,Poor,7
+HS_kanpur_industrial_2025-11-03_217,kanpur_industrial,2025-11-03,26.425,80.2,246.3,264.9,Poor,10
+HS_kanpur_industrial_2025-11-03_218,kanpur_industrial,2025-11-03,26.4265,80.4176,265.8,313.6,Very Poor,34
+HS_kanpur_industrial_2025-11-03_219,kanpur_industrial,2025-11-03,26.575,80.2,234.0,241.0,Poor,2
+HS_kanpur_industrial_2025-11-03_220,kanpur_industrial,2025-11-03,26.575,80.4214,300.0,327.8,Very Poor,7
+HS_kanpur_industrial_2025-11-04_221,kanpur_industrial,2025-11-04,26.45,80.47,238.1,250.9,Poor,10
+HS_kanpur_industrial_2025-11-05_222,kanpur_industrial,2025-11-05,26.425,80.2,246.6,272.9,Poor,10
+HS_kanpur_industrial_2025-11-05_223,kanpur_industrial,2025-11-05,26.4317,80.43,235.8,319.5,Very Poor,30
+HS_kanpur_industrial_2025-11-05_224,kanpur_industrial,2025-11-05,26.575,80.2,250.4,253.6,Poor,2
+HS_kanpur_industrial_2025-11-05_225,kanpur_industrial,2025-11-05,26.575,80.4214,230.6,247.9,Poor,7
+HS_kanpur_industrial_2025-11-06_226,kanpur_industrial,2025-11-06,26.425,80.175,204.6,204.6,Poor,1
+HS_kanpur_industrial_2025-11-06_227,kanpur_industrial,2025-11-06,26.525,80.525,202.9,202.9,Poor,1
+HS_kanpur_industrial_2025-11-06_228,kanpur_industrial,2025-11-06,26.575,80.225,220.7,220.7,Poor,1
+HS_kanpur_industrial_2025-11-06_229,kanpur_industrial,2025-11-06,26.575,80.325,227.1,238.4,Poor,3
+HS_kanpur_industrial_2025-11-07_230,kanpur_industrial,2025-11-07,26.425,80.2,255.9,291.4,Poor,10
+HS_kanpur_industrial_2025-11-07_231,kanpur_industrial,2025-11-07,26.4446,80.4045,233.7,278.9,Poor,28
+HS_kanpur_industrial_2025-11-07_232,kanpur_industrial,2025-11-07,26.575,80.2,254.0,265.7,Poor,2
+HS_kanpur_industrial_2025-11-07_233,kanpur_industrial,2025-11-07,26.575,80.4214,252.2,272.0,Poor,7
+HS_kanpur_industrial_2025-11-08_234,kanpur_industrial,2025-11-08,26.425,80.2,276.4,313.9,Very Poor,10
+HS_kanpur_industrial_2025-11-08_235,kanpur_industrial,2025-11-08,26.4265,80.4176,281.5,330.4,Very Poor,34
+HS_kanpur_industrial_2025-11-08_236,kanpur_industrial,2025-11-08,26.575,80.2,327.6,345.8,Very Poor,2
+HS_kanpur_industrial_2025-11-08_237,kanpur_industrial,2025-11-08,26.575,80.4214,254.5,332.4,Very Poor,7
+HS_kanpur_industrial_2025-11-09_238,kanpur_industrial,2025-11-09,26.425,80.2,271.8,320.5,Very Poor,10
+HS_kanpur_industrial_2025-11-09_239,kanpur_industrial,2025-11-09,26.425,80.4137,235.7,296.9,Poor,31
+HS_kanpur_industrial_2025-11-09_240,kanpur_industrial,2025-11-09,26.575,80.2,270.8,284.2,Poor,2
+HS_kanpur_industrial_2025-11-09_241,kanpur_industrial,2025-11-09,26.575,80.4214,278.4,311.2,Very Poor,7
+HS_kanpur_industrial_2025-11-10_242,kanpur_industrial,2025-11-10,26.425,80.2,244.1,262.2,Poor,10
+HS_kanpur_industrial_2025-11-10_243,kanpur_industrial,2025-11-10,26.4265,80.4176,264.9,356.7,Very Poor,34
+HS_kanpur_industrial_2025-11-10_244,kanpur_industrial,2025-11-10,26.575,80.225,224.4,224.4,Poor,1
+HS_kanpur_industrial_2025-11-10_245,kanpur_industrial,2025-11-10,26.575,80.4458,297.7,323.9,Very Poor,6
+HS_kanpur_industrial_2025-11-11_246,kanpur_industrial,2025-11-11,26.35,80.2,249.4,266.5,Poor,4
+HS_kanpur_industrial_2025-11-11_247,kanpur_industrial,2025-11-11,26.3958,80.4094,230.7,274.2,Poor,24
+HS_kanpur_industrial_2025-11-11_248,kanpur_industrial,2025-11-11,26.575,80.41,219.0,245.8,Poor,5
+HS_kanpur_industrial_2025-11-12_249,kanpur_industrial,2025-11-12,26.425,80.2,273.9,293.4,Poor,10
+HS_kanpur_industrial_2025-11-12_250,kanpur_industrial,2025-11-12,26.4286,80.3946,235.7,294.3,Poor,28
+HS_kanpur_industrial_2025-11-12_251,kanpur_industrial,2025-11-12,26.575,80.2,278.8,291.9,Poor,2
+HS_kanpur_industrial_2025-11-12_252,kanpur_industrial,2025-11-12,26.575,80.4214,245.8,298.8,Poor,7
+HS_kanpur_industrial_2025-11-13_253,kanpur_industrial,2025-11-13,26.4306,80.2028,254.0,271.6,Poor,9
+HS_kanpur_industrial_2025-11-13_254,kanpur_industrial,2025-11-13,26.4375,80.4125,227.0,264.6,Poor,28
+HS_kanpur_industrial_2025-11-13_255,kanpur_industrial,2025-11-13,26.575,80.2,281.7,309.1,Very Poor,2
+HS_kanpur_industrial_2025-11-13_256,kanpur_industrial,2025-11-13,26.575,80.4214,228.0,299.7,Poor,7
+HS_kanpur_industrial_2025-11-14_257,kanpur_industrial,2025-11-14,26.375,80.2,253.8,300.7,Very Poor,6
+HS_kanpur_industrial_2025-11-14_258,kanpur_industrial,2025-11-14,26.425,80.441,244.1,325.5,Very Poor,25
+HS_kanpur_industrial_2025-11-14_259,kanpur_industrial,2025-11-14,26.575,80.4458,238.2,258.2,Poor,6
+HS_kanpur_industrial_2025-11-15_260,kanpur_industrial,2025-11-15,26.425,80.2,235.5,289.4,Poor,10
+HS_kanpur_industrial_2025-11-15_261,kanpur_industrial,2025-11-15,26.4265,80.4176,256.9,318.4,Very Poor,34
+HS_kanpur_industrial_2025-11-15_262,kanpur_industrial,2025-11-15,26.575,80.2,245.6,249.1,Poor,2
+HS_kanpur_industrial_2025-11-15_263,kanpur_industrial,2025-11-15,26.575,80.4375,247.6,268.8,Poor,6
+HS_punjab_stubble_belt_2025-10-15_264,punjab_stubble_belt,2025-10-15,31.325,74.725,221.9,234.2,Poor,5
+HS_punjab_stubble_belt_2025-10-15_265,punjab_stubble_belt,2025-10-15,31.325,75.015,220.6,243.7,Poor,5
+HS_punjab_stubble_belt_2025-10-15_266,punjab_stubble_belt,2025-10-15,31.325,75.25,223.5,242.5,Poor,3
+HS_punjab_stubble_belt_2025-10-15_267,punjab_stubble_belt,2025-10-15,31.4812,74.7271,226.8,275.0,Poor,24
+HS_punjab_stubble_belt_2025-10-15_268,punjab_stubble_belt,2025-10-15,31.4895,75.0153,242.2,292.5,Poor,31
+HS_punjab_stubble_belt_2025-10-15_269,punjab_stubble_belt,2025-10-15,31.535,75.2483,233.6,261.9,Poor,15
+HS_punjab_stubble_belt_2025-10-15_270,punjab_stubble_belt,2025-10-15,31.7773,74.7227,225.8,258.6,Poor,22
+HS_punjab_stubble_belt_2025-10-15_271,punjab_stubble_belt,2025-10-15,31.7667,75.0042,217.8,250.7,Poor,24
+HS_punjab_stubble_belt_2025-10-15_272,punjab_stubble_belt,2025-10-15,31.7776,75.2408,245.1,270.9,Poor,19
+HS_punjab_stubble_belt_2025-10-16_273,punjab_stubble_belt,2025-10-16,31.325,74.725,339.5,366.0,Very Poor,5
+HS_punjab_stubble_belt_2025-10-16_274,punjab_stubble_belt,2025-10-16,31.325,74.975,245.3,357.2,Very Poor,5
+HS_punjab_stubble_belt_2025-10-16_275,punjab_stubble_belt,2025-10-16,31.325,75.2437,236.7,259.7,Poor,4
+HS_punjab_stubble_belt_2025-10-16_276,punjab_stubble_belt,2025-10-16,31.4702,74.7226,249.5,332.4,Very Poor,21
+HS_punjab_stubble_belt_2025-10-16_277,punjab_stubble_belt,2025-10-16,31.4971,75.0,239.9,300.4,Very Poor,34
+HS_punjab_stubble_belt_2025-10-16_278,punjab_stubble_belt,2025-10-16,31.5045,75.2386,230.3,276.8,Poor,22
+HS_punjab_stubble_belt_2025-10-16_279,punjab_stubble_belt,2025-10-16,31.7882,74.7303,227.3,261.1,Poor,19
+HS_punjab_stubble_belt_2025-10-16_280,punjab_stubble_belt,2025-10-16,31.788,74.9967,230.6,288.4,Poor,23
+HS_punjab_stubble_belt_2025-10-16_281,punjab_stubble_belt,2025-10-16,31.7625,75.2312,264.3,352.2,Very Poor,16
+HS_punjab_stubble_belt_2025-10-17_282,punjab_stubble_belt,2025-10-17,31.325,74.725,230.0,293.4,Poor,5
+HS_punjab_stubble_belt_2025-10-17_283,punjab_stubble_belt,2025-10-17,31.325,75.0,245.8,279.5,Poor,6
+HS_punjab_stubble_belt_2025-10-17_284,punjab_stubble_belt,2025-10-17,31.5019,74.7154,243.2,313.2,Very Poor,26
+HS_punjab_stubble_belt_2025-10-17_285,punjab_stubble_belt,2025-10-17,31.5145,74.9908,221.2,249.5,Poor,19
+HS_punjab_stubble_belt_2025-10-17_286,punjab_stubble_belt,2025-10-17,31.5139,75.25,214.6,232.8,Poor,9
+HS_punjab_stubble_belt_2025-10-17_287,punjab_stubble_belt,2025-10-17,31.7625,74.6969,216.3,234.4,Poor,16
+HS_punjab_stubble_belt_2025-10-17_288,punjab_stubble_belt,2025-10-17,31.7725,74.995,243.7,283.3,Poor,20
+HS_punjab_stubble_belt_2025-10-17_289,punjab_stubble_belt,2025-10-17,31.8306,75.2556,218.1,244.3,Poor,9
+HS_punjab_stubble_belt_2025-10-18_290,punjab_stubble_belt,2025-10-18,31.325,74.775,283.0,303.7,Very Poor,3
+HS_punjab_stubble_belt_2025-10-18_291,punjab_stubble_belt,2025-10-18,31.325,74.9917,215.2,221.0,Poor,3
+HS_punjab_stubble_belt_2025-10-18_292,punjab_stubble_belt,2025-10-18,31.325,75.2437,233.1,252.2,Poor,4
+HS_punjab_stubble_belt_2025-10-18_293,punjab_stubble_belt,2025-10-18,31.4991,74.7216,248.0,292.3,Poor,29
+HS_punjab_stubble_belt_2025-10-18_294,punjab_stubble_belt,2025-10-18,31.5009,74.9954,223.7,284.5,Poor,27
+HS_punjab_stubble_belt_2025-10-18_295,punjab_stubble_belt,2025-10-18,31.5292,75.2479,216.3,257.3,Poor,12
+HS_punjab_stubble_belt_2025-10-18_296,punjab_stubble_belt,2025-10-18,31.8058,74.7404,250.3,306.1,Very Poor,13
+HS_punjab_stubble_belt_2025-10-18_297,punjab_stubble_belt,2025-10-18,31.7544,74.9691,219.6,248.4,Poor,17
+HS_punjab_stubble_belt_2025-10-18_298,punjab_stubble_belt,2025-10-18,31.725,75.2525,236.9,260.2,Poor,10
+HS_punjab_stubble_belt_2025-10-19_299,punjab_stubble_belt,2025-10-19,31.325,74.7083,223.6,263.4,Poor,3
+HS_punjab_stubble_belt_2025-10-19_300,punjab_stubble_belt,2025-10-19,31.325,74.975,217.9,236.6,Poor,4
+HS_punjab_stubble_belt_2025-10-19_301,punjab_stubble_belt,2025-10-19,31.325,75.2,210.4,212.6,Poor,2
+HS_punjab_stubble_belt_2025-10-19_302,punjab_stubble_belt,2025-10-19,31.5309,74.7221,211.0,235.6,Poor,17
+HS_punjab_stubble_belt_2025-10-19_303,punjab_stubble_belt,2025-10-19,31.4833,74.9694,221.7,251.3,Poor,18
+HS_punjab_stubble_belt_2025-10-19_304,punjab_stubble_belt,2025-10-19,31.6,75.2875,217.6,226.2,Poor,4
+HS_punjab_stubble_belt_2025-10-19_305,punjab_stubble_belt,2025-10-19,31.735,74.655,226.9,273.0,Poor,5
+HS_punjab_stubble_belt_2025-10-19_306,punjab_stubble_belt,2025-10-19,31.775,74.9691,237.7,299.2,Poor,17
+HS_punjab_stubble_belt_2025-10-19_307,punjab_stubble_belt,2025-10-19,31.77,75.2575,232.7,270.4,Poor,10
+HS_punjab_stubble_belt_2025-10-20_308,punjab_stubble_belt,2025-10-20,31.325,74.7083,220.3,249.0,Poor,3
+HS_punjab_stubble_belt_2025-10-20_309,punjab_stubble_belt,2025-10-20,31.325,74.9875,226.0,239.3,Poor,4
+HS_punjab_stubble_belt_2025-10-20_310,punjab_stubble_belt,2025-10-20,31.325,75.2667,210.1,214.0,Poor,3
+HS_punjab_stubble_belt_2025-10-20_311,punjab_stubble_belt,2025-10-20,31.4844,74.7062,219.2,252.2,Poor,16
+HS_punjab_stubble_belt_2025-10-20_312,punjab_stubble_belt,2025-10-20,31.4938,74.9937,232.1,290.1,Poor,32
+HS_punjab_stubble_belt_2025-10-20_313,punjab_stubble_belt,2025-10-20,31.52,75.2325,220.7,244.9,Poor,10
+HS_punjab_stubble_belt_2025-10-20_314,punjab_stubble_belt,2025-10-20,31.815,74.77,224.8,247.3,Poor,10
+HS_punjab_stubble_belt_2025-10-20_315,punjab_stubble_belt,2025-10-20,31.7483,74.9783,228.0,256.9,Poor,15
+HS_punjab_stubble_belt_2025-10-20_316,punjab_stubble_belt,2025-10-20,31.7806,75.2528,233.9,273.8,Poor,9
+HS_punjab_stubble_belt_2025-10-21_317,punjab_stubble_belt,2025-10-21,31.325,74.675,228.8,228.8,Poor,1
+HS_punjab_stubble_belt_2025-10-21_318,punjab_stubble_belt,2025-10-21,31.325,75.125,205.5,205.5,Poor,1
+HS_punjab_stubble_belt_2025-10-21_319,punjab_stubble_belt,2025-10-21,31.325,75.2875,232.2,238.2,Poor,2
+HS_punjab_stubble_belt_2025-10-21_320,punjab_stubble_belt,2025-10-21,31.5156,74.7438,225.8,250.1,Poor,16
+HS_punjab_stubble_belt_2025-10-21_321,punjab_stubble_belt,2025-10-21,31.5171,74.9671,249.3,340.5,Very Poor,19
+HS_punjab_stubble_belt_2025-10-21_322,punjab_stubble_belt,2025-10-21,31.4964,75.2429,216.0,242.0,Poor,7
+HS_punjab_stubble_belt_2025-10-21_323,punjab_stubble_belt,2025-10-21,31.7333,74.775,220.6,237.0,Poor,6
+HS_punjab_stubble_belt_2025-10-21_324,punjab_stubble_belt,2025-10-21,31.7904,75.0327,225.7,248.7,Poor,13
+HS_punjab_stubble_belt_2025-10-21_325,punjab_stubble_belt,2025-10-21,31.865,75.23,208.2,210.2,Poor,5
+HS_punjab_stubble_belt_2025-10-22_326,punjab_stubble_belt,2025-10-22,31.325,74.725,237.1,243.1,Poor,5
+HS_punjab_stubble_belt_2025-10-22_327,punjab_stubble_belt,2025-10-22,31.325,75.0,266.6,297.6,Poor,6
+HS_punjab_stubble_belt_2025-10-22_328,punjab_stubble_belt,2025-10-22,31.325,75.2437,205.6,211.4,Poor,4
+HS_punjab_stubble_belt_2025-10-22_329,punjab_stubble_belt,2025-10-22,31.4923,74.7212,236.0,266.5,Poor,26
+HS_punjab_stubble_belt_2025-10-22_330,punjab_stubble_belt,2025-10-22,31.5104,74.9896,236.1,266.2,Poor,24
+HS_punjab_stubble_belt_2025-10-22_331,punjab_stubble_belt,2025-10-22,31.5361,75.2389,221.4,252.4,Poor,9
+HS_punjab_stubble_belt_2025-10-22_332,punjab_stubble_belt,2025-10-22,31.7673,74.7596,233.3,264.4,Poor,13
+HS_punjab_stubble_belt_2025-10-22_333,punjab_stubble_belt,2025-10-22,31.7596,75.0173,234.1,300.7,Very Poor,13
+HS_punjab_stubble_belt_2025-10-22_334,punjab_stubble_belt,2025-10-22,31.7779,75.2412,233.5,264.1,Poor,17
+HS_punjab_stubble_belt_2025-10-23_335,punjab_stubble_belt,2025-10-23,31.325,74.725,268.7,301.4,Very Poor,5
+HS_punjab_stubble_belt_2025-10-23_336,punjab_stubble_belt,2025-10-23,31.325,75.0,265.6,296.8,Poor,6
+HS_punjab_stubble_belt_2025-10-23_337,punjab_stubble_belt,2025-10-23,31.325,75.2437,288.4,299.4,Poor,4
+HS_punjab_stubble_belt_2025-10-23_338,punjab_stubble_belt,2025-10-23,31.5,74.725,271.9,327.3,Very Poor,30
+HS_punjab_stubble_belt_2025-10-23_339,punjab_stubble_belt,2025-10-23,31.501,75.017,245.2,294.9,Poor,25
+HS_punjab_stubble_belt_2025-10-23_340,punjab_stubble_belt,2025-10-23,31.5011,75.2413,272.0,312.6,Very Poor,23
+HS_punjab_stubble_belt_2025-10-23_341,punjab_stubble_belt,2025-10-23,31.775,74.7276,244.1,300.5,Very Poor,19
+HS_punjab_stubble_belt_2025-10-23_342,punjab_stubble_belt,2025-10-23,31.775,75.0,245.7,319.5,Very Poor,30
+HS_punjab_stubble_belt_2025-10-23_343,punjab_stubble_belt,2025-10-23,31.7776,75.2408,259.8,300.6,Very Poor,19
+HS_punjab_stubble_belt_2025-10-24_344,punjab_stubble_belt,2025-10-24,31.325,74.725,269.2,293.4,Poor,5
+HS_punjab_stubble_belt_2025-10-24_345,punjab_stubble_belt,2025-10-24,31.325,75.0,234.8,263.7,Poor,6
+HS_punjab_stubble_belt_2025-10-24_346,punjab_stubble_belt,2025-10-24,31.325,75.25,239.4,261.2,Poor,3
+HS_punjab_stubble_belt_2025-10-24_347,punjab_stubble_belt,2025-10-24,31.5018,74.7196,266.9,330.4,Very Poor,28
+HS_punjab_stubble_belt_2025-10-24_348,punjab_stubble_belt,2025-10-24,31.475,74.9769,242.1,280.4,Poor,26
+HS_punjab_stubble_belt_2025-10-24_349,punjab_stubble_belt,2025-10-24,31.4955,75.2386,236.4,266.6,Poor,22
+HS_punjab_stubble_belt_2025-10-24_350,punjab_stubble_belt,2025-10-24,31.775,74.725,256.3,358.9,Very Poor,25
+HS_punjab_stubble_belt_2025-10-24_351,punjab_stubble_belt,2025-10-24,31.8167,74.9806,230.7,322.2,Very Poor,18
+HS_punjab_stubble_belt_2025-10-24_352,punjab_stubble_belt,2025-10-24,31.815,75.205,230.3,260.7,Poor,5
+HS_punjab_stubble_belt_2025-10-25_353,punjab_stubble_belt,2025-10-25,31.325,74.675,239.8,245.2,Poor,3
+HS_punjab_stubble_belt_2025-10-25_354,punjab_stubble_belt,2025-10-25,31.325,75.0,234.9,262.9,Poor,6
+HS_punjab_stubble_belt_2025-10-25_355,punjab_stubble_belt,2025-10-25,31.325,75.2437,247.1,293.8,Poor,4
+HS_punjab_stubble_belt_2025-10-25_356,punjab_stubble_belt,2025-10-25,31.5,74.725,280.7,370.5,Very Poor,30
+HS_punjab_stubble_belt_2025-10-25_357,punjab_stubble_belt,2025-10-25,31.5173,74.9865,236.8,288.0,Poor,13
+HS_punjab_stubble_belt_2025-10-25_358,punjab_stubble_belt,2025-10-25,31.4783,75.24,220.3,249.5,Poor,15
+HS_punjab_stubble_belt_2025-10-25_359,punjab_stubble_belt,2025-10-25,31.775,74.725,245.5,320.0,Very Poor,25
+HS_punjab_stubble_belt_2025-10-25_360,punjab_stubble_belt,2025-10-25,31.7566,74.9618,236.7,315.9,Very Poor,19
+HS_punjab_stubble_belt_2025-10-25_361,punjab_stubble_belt,2025-10-25,31.7958,75.2375,213.9,232.6,Poor,12
+HS_punjab_stubble_belt_2025-10-26_362,punjab_stubble_belt,2025-10-26,31.325,74.725,255.3,264.8,Poor,5
+HS_punjab_stubble_belt_2025-10-26_363,punjab_stubble_belt,2025-10-26,31.325,75.0,265.4,287.1,Poor,6
+HS_punjab_stubble_belt_2025-10-26_364,punjab_stubble_belt,2025-10-26,31.325,75.2437,273.1,275.3,Poor,4
+HS_punjab_stubble_belt_2025-10-26_365,punjab_stubble_belt,2025-10-26,31.475,74.725,227.3,258.3,Poor,20
+HS_punjab_stubble_belt_2025-10-26_366,punjab_stubble_belt,2025-10-26,31.471,75.011,241.8,280.6,Poor,25
+HS_punjab_stubble_belt_2025-10-26_367,punjab_stubble_belt,2025-10-26,31.5011,75.2413,272.0,316.3,Very Poor,23
+HS_punjab_stubble_belt_2025-10-26_368,punjab_stubble_belt,2025-10-26,31.7803,74.7303,227.1,270.6,Poor,19
+HS_punjab_stubble_belt_2025-10-26_369,punjab_stubble_belt,2025-10-26,31.7531,74.9844,235.5,266.3,Poor,16
+HS_punjab_stubble_belt_2025-10-26_370,punjab_stubble_belt,2025-10-26,31.7719,75.2359,253.0,326.4,Very Poor,16
+HS_punjab_stubble_belt_2025-10-27_371,punjab_stubble_belt,2025-10-27,31.325,74.65,213.0,213.3,Poor,2
+HS_punjab_stubble_belt_2025-10-27_372,punjab_stubble_belt,2025-10-27,31.325,74.995,237.2,280.6,Poor,5
+HS_punjab_stubble_belt_2025-10-27_373,punjab_stubble_belt,2025-10-27,31.325,75.2437,256.7,282.5,Poor,4
+HS_punjab_stubble_belt_2025-10-27_374,punjab_stubble_belt,2025-10-27,31.5058,74.7308,230.3,263.6,Poor,26
+HS_punjab_stubble_belt_2025-10-27_375,punjab_stubble_belt,2025-10-27,31.495,74.9967,247.3,298.5,Poor,30
+HS_punjab_stubble_belt_2025-10-27_376,punjab_stubble_belt,2025-10-27,31.4673,75.2288,225.9,254.6,Poor,13
+HS_punjab_stubble_belt_2025-10-27_377,punjab_stubble_belt,2025-10-27,31.7795,74.725,230.6,258.0,Poor,22
+HS_punjab_stubble_belt_2025-10-27_378,punjab_stubble_belt,2025-10-27,31.7676,74.9954,252.8,329.3,Very Poor,27
+HS_punjab_stubble_belt_2025-10-27_379,punjab_stubble_belt,2025-10-27,31.76,75.235,225.7,253.2,Poor,10
+HS_punjab_stubble_belt_2025-10-28_380,punjab_stubble_belt,2025-10-28,31.325,74.725,284.4,297.1,Poor,5
+HS_punjab_stubble_belt_2025-10-28_381,punjab_stubble_belt,2025-10-28,31.325,75.0,297.5,326.5,Very Poor,6
+HS_punjab_stubble_belt_2025-10-28_382,punjab_stubble_belt,2025-10-28,31.325,75.2437,289.0,314.0,Very Poor,4
+HS_punjab_stubble_belt_2025-10-28_383,punjab_stubble_belt,2025-10-28,31.5,74.725,310.1,368.6,Very Poor,30
+HS_punjab_stubble_belt_2025-10-28_384,punjab_stubble_belt,2025-10-28,31.4993,74.9979,280.5,352.3,Very Poor,35
+HS_punjab_stubble_belt_2025-10-28_385,punjab_stubble_belt,2025-10-28,31.5011,75.2413,300.6,360.1,Very Poor,23
+HS_punjab_stubble_belt_2025-10-28_386,punjab_stubble_belt,2025-10-28,31.7771,74.725,273.1,317.0,Very Poor,24
+HS_punjab_stubble_belt_2025-10-28_387,punjab_stubble_belt,2025-10-28,31.775,75.0,274.8,325.4,Very Poor,30
+HS_punjab_stubble_belt_2025-10-28_388,punjab_stubble_belt,2025-10-28,31.7776,75.2408,294.6,340.7,Very Poor,19
+HS_punjab_stubble_belt_2025-10-29_389,punjab_stubble_belt,2025-10-29,31.325,74.725,252.8,267.9,Poor,5
+HS_punjab_stubble_belt_2025-10-29_390,punjab_stubble_belt,2025-10-29,31.325,75.0,269.0,315.9,Very Poor,6
+HS_punjab_stubble_belt_2025-10-29_391,punjab_stubble_belt,2025-10-29,31.325,75.2437,245.2,266.0,Poor,4
+HS_punjab_stubble_belt_2025-10-29_392,punjab_stubble_belt,2025-10-29,31.5,74.725,257.2,316.1,Very Poor,30
+HS_punjab_stubble_belt_2025-10-29_393,punjab_stubble_belt,2025-10-29,31.4817,74.9967,258.1,330.8,Very Poor,30
+HS_punjab_stubble_belt_2025-10-29_394,punjab_stubble_belt,2025-10-29,31.4617,75.2483,229.6,250.6,Poor,15
+HS_punjab_stubble_belt_2025-10-29_395,punjab_stubble_belt,2025-10-29,31.7682,74.725,253.9,324.1,Very Poor,22
+HS_punjab_stubble_belt_2025-10-29_396,punjab_stubble_belt,2025-10-29,31.7788,74.9962,224.5,269.5,Poor,26
+HS_punjab_stubble_belt_2025-10-29_397,punjab_stubble_belt,2025-10-29,31.7776,75.2408,241.4,317.5,Very Poor,19
+HS_punjab_stubble_belt_2025-10-30_398,punjab_stubble_belt,2025-10-30,31.325,74.725,280.5,329.9,Very Poor,5
+HS_punjab_stubble_belt_2025-10-30_399,punjab_stubble_belt,2025-10-30,31.325,75.0,267.9,327.2,Very Poor,6
+HS_punjab_stubble_belt_2025-10-30_400,punjab_stubble_belt,2025-10-30,31.325,75.225,234.8,250.0,Poor,3
+HS_punjab_stubble_belt_2025-10-30_401,punjab_stubble_belt,2025-10-30,31.5,74.725,280.8,359.1,Very Poor,30
+HS_punjab_stubble_belt_2025-10-30_402,punjab_stubble_belt,2025-10-30,31.5054,74.9489,262.3,350.5,Very Poor,23
+HS_punjab_stubble_belt_2025-10-30_403,punjab_stubble_belt,2025-10-30,31.4705,75.2295,215.1,235.1,Poor,11
+HS_punjab_stubble_belt_2025-10-30_404,punjab_stubble_belt,2025-10-30,31.7417,74.7125,231.8,272.5,Poor,12
+HS_punjab_stubble_belt_2025-10-30_405,punjab_stubble_belt,2025-10-30,31.7321,75.0143,215.3,241.2,Poor,14
+HS_punjab_stubble_belt_2025-10-30_406,punjab_stubble_belt,2025-10-30,31.8028,75.2806,213.1,245.7,Poor,9
+HS_punjab_stubble_belt_2025-10-31_407,punjab_stubble_belt,2025-10-31,31.325,74.675,235.0,252.5,Poor,3
+HS_punjab_stubble_belt_2025-10-31_408,punjab_stubble_belt,2025-10-31,31.325,75.015,269.7,300.5,Very Poor,5
+HS_punjab_stubble_belt_2025-10-31_409,punjab_stubble_belt,2025-10-31,31.325,75.2875,228.8,238.0,Poor,2
+HS_punjab_stubble_belt_2025-10-31_410,punjab_stubble_belt,2025-10-31,31.475,74.7091,277.0,412.0,Severe,22
+HS_punjab_stubble_belt_2025-10-31_411,punjab_stubble_belt,2025-10-31,31.4938,75.0109,249.6,338.9,Very Poor,32
+HS_punjab_stubble_belt_2025-10-31_412,punjab_stubble_belt,2025-10-31,31.525,75.2458,240.4,295.4,Poor,18
+HS_punjab_stubble_belt_2025-10-31_413,punjab_stubble_belt,2025-10-31,31.7727,74.7341,240.0,287.6,Poor,22
+HS_punjab_stubble_belt_2025-10-31_414,punjab_stubble_belt,2025-10-31,31.7846,75.0077,244.5,303.9,Very Poor,26
+HS_punjab_stubble_belt_2025-10-31_415,punjab_stubble_belt,2025-10-31,31.7806,75.2444,237.3,290.4,Poor,18
+HS_punjab_stubble_belt_2025-11-01_416,punjab_stubble_belt,2025-11-01,31.325,74.725,303.8,338.9,Very Poor,5
+HS_punjab_stubble_belt_2025-11-01_417,punjab_stubble_belt,2025-11-01,31.325,75.0,277.3,316.5,Very Poor,6
+HS_punjab_stubble_belt_2025-11-01_418,punjab_stubble_belt,2025-11-01,31.325,75.2437,252.6,260.2,Poor,4
+HS_punjab_stubble_belt_2025-11-01_419,punjab_stubble_belt,2025-11-01,31.5009,74.7284,295.2,393.8,Very Poor,29
+HS_punjab_stubble_belt_2025-11-01_420,punjab_stubble_belt,2025-11-01,31.5,75.0,264.7,337.2,Very Poor,36
+HS_punjab_stubble_belt_2025-11-01_421,punjab_stubble_belt,2025-11-01,31.5011,75.2413,263.4,340.5,Very Poor,23
+HS_punjab_stubble_belt_2025-11-01_422,punjab_stubble_belt,2025-11-01,31.775,74.725,251.8,315.8,Very Poor,25
+HS_punjab_stubble_belt_2025-11-01_423,punjab_stubble_belt,2025-11-01,31.781,75.007,251.2,317.2,Very Poor,25
+HS_punjab_stubble_belt_2025-11-01_424,punjab_stubble_belt,2025-11-01,31.7722,75.2444,252.1,329.3,Very Poor,18
+HS_punjab_stubble_belt_2025-11-02_425,punjab_stubble_belt,2025-11-02,31.325,74.725,311.3,318.2,Very Poor,5
+HS_punjab_stubble_belt_2025-11-02_426,punjab_stubble_belt,2025-11-02,31.325,75.0,308.5,329.9,Very Poor,6
+HS_punjab_stubble_belt_2025-11-02_427,punjab_stubble_belt,2025-11-02,31.325,75.2437,315.8,324.8,Very Poor,4
+HS_punjab_stubble_belt_2025-11-02_428,punjab_stubble_belt,2025-11-02,31.5,74.725,289.2,375.7,Very Poor,30
+HS_punjab_stubble_belt_2025-11-02_429,punjab_stubble_belt,2025-11-02,31.4977,74.9947,266.1,340.9,Very Poor,33
+HS_punjab_stubble_belt_2025-11-02_430,punjab_stubble_belt,2025-11-02,31.5011,75.2413,302.9,340.1,Very Poor,23
+HS_punjab_stubble_belt_2025-11-02_431,punjab_stubble_belt,2025-11-02,31.7663,74.7228,266.1,323.7,Very Poor,23
+HS_punjab_stubble_belt_2025-11-02_432,punjab_stubble_belt,2025-11-02,31.775,75.0,250.7,338.4,Very Poor,30
+HS_punjab_stubble_belt_2025-11-02_433,punjab_stubble_belt,2025-11-02,31.7691,75.2382,235.2,279.3,Poor,17
+HS_punjab_stubble_belt_2025-11-03_434,punjab_stubble_belt,2025-11-03,31.325,74.725,254.6,280.9,Poor,5
+HS_punjab_stubble_belt_2025-11-03_435,punjab_stubble_belt,2025-11-03,31.325,75.0,263.7,286.1,Poor,6
+HS_punjab_stubble_belt_2025-11-03_436,punjab_stubble_belt,2025-11-03,31.325,75.2437,248.3,265.6,Poor,4
+HS_punjab_stubble_belt_2025-11-03_437,punjab_stubble_belt,2025-11-03,31.5026,74.7216,289.7,431.0,Severe,29
+HS_punjab_stubble_belt_2025-11-03_438,punjab_stubble_belt,2025-11-03,31.5083,75.0053,266.5,311.9,Very Poor,33
+HS_punjab_stubble_belt_2025-11-03_439,punjab_stubble_belt,2025-11-03,31.5023,75.242,233.6,276.6,Poor,22
+HS_punjab_stubble_belt_2025-11-03_440,punjab_stubble_belt,2025-11-03,31.775,74.725,268.3,323.4,Very Poor,25
+HS_punjab_stubble_belt_2025-11-03_441,punjab_stubble_belt,2025-11-03,31.767,75.003,254.1,329.3,Very Poor,25
+HS_punjab_stubble_belt_2025-11-03_442,punjab_stubble_belt,2025-11-03,31.7833,75.2444,240.5,326.8,Very Poor,18
+HS_punjab_stubble_belt_2025-11-04_443,punjab_stubble_belt,2025-11-04,31.325,74.725,255.0,299.4,Poor,5
+HS_punjab_stubble_belt_2025-11-04_444,punjab_stubble_belt,2025-11-04,31.325,75.0,286.3,300.5,Very Poor,6
+HS_punjab_stubble_belt_2025-11-04_445,punjab_stubble_belt,2025-11-04,31.325,75.2437,308.8,358.6,Very Poor,4
+HS_punjab_stubble_belt_2025-11-04_446,punjab_stubble_belt,2025-11-04,31.5,74.725,284.1,365.1,Very Poor,30
+HS_punjab_stubble_belt_2025-11-04_447,punjab_stubble_belt,2025-11-04,31.5,75.0,273.1,362.9,Very Poor,36
+HS_punjab_stubble_belt_2025-11-04_448,punjab_stubble_belt,2025-11-04,31.5011,75.2413,307.6,395.1,Very Poor,23
+HS_punjab_stubble_belt_2025-11-04_449,punjab_stubble_belt,2025-11-04,31.775,74.725,251.5,301.4,Very Poor,25
+HS_punjab_stubble_belt_2025-11-04_450,punjab_stubble_belt,2025-11-04,31.775,75.0009,264.4,309.7,Very Poor,29
+HS_punjab_stubble_belt_2025-11-04_451,punjab_stubble_belt,2025-11-04,31.7776,75.2408,295.9,357.5,Very Poor,19
+HS_punjab_stubble_belt_2025-11-05_452,punjab_stubble_belt,2025-11-05,31.325,75.0583,218.3,237.0,Poor,3
+HS_punjab_stubble_belt_2025-11-05_453,punjab_stubble_belt,2025-11-05,31.325,75.2437,213.2,222.1,Poor,4
+HS_punjab_stubble_belt_2025-11-05_454,punjab_stubble_belt,2025-11-05,31.5317,74.7483,227.0,261.5,Poor,15
+HS_punjab_stubble_belt_2025-11-05_455,punjab_stubble_belt,2025-11-05,31.4679,75.0083,228.2,276.2,Poor,21
+HS_punjab_stubble_belt_2025-11-05_456,punjab_stubble_belt,2025-11-05,31.5,75.245,241.5,288.5,Poor,20
+HS_punjab_stubble_belt_2025-11-05_457,punjab_stubble_belt,2025-11-05,31.7865,74.7635,234.9,264.7,Poor,13
+HS_punjab_stubble_belt_2025-11-05_458,punjab_stubble_belt,2025-11-05,31.7829,75.0145,226.2,251.9,Poor,19
+HS_punjab_stubble_belt_2025-11-05_459,punjab_stubble_belt,2025-11-05,31.7719,75.2469,249.3,276.9,Poor,16
+HS_punjab_stubble_belt_2025-11-06_460,punjab_stubble_belt,2025-11-06,31.325,74.75,228.8,241.0,Poor,4
+HS_punjab_stubble_belt_2025-11-06_461,punjab_stubble_belt,2025-11-06,31.325,74.875,208.9,208.9,Poor,1
+HS_punjab_stubble_belt_2025-11-06_462,punjab_stubble_belt,2025-11-06,31.325,75.2875,208.9,209.6,Poor,2
+HS_punjab_stubble_belt_2025-11-06_463,punjab_stubble_belt,2025-11-06,31.425,74.7333,211.8,220.3,Poor,6
+HS_punjab_stubble_belt_2025-11-06_464,punjab_stubble_belt,2025-11-06,31.5107,74.9821,229.1,294.6,Poor,14
+HS_punjab_stubble_belt_2025-11-06_465,punjab_stubble_belt,2025-11-06,31.575,75.3,211.3,228.7,Poor,3
+HS_punjab_stubble_belt_2025-11-06_466,punjab_stubble_belt,2025-11-06,31.8107,74.6964,223.2,246.8,Poor,7
+HS_punjab_stubble_belt_2025-11-06_467,punjab_stubble_belt,2025-11-06,31.775,75.1,212.4,227.0,Poor,4
+HS_punjab_stubble_belt_2025-11-06_468,punjab_stubble_belt,2025-11-06,31.8028,75.275,207.0,218.5,Poor,9
+HS_punjab_stubble_belt_2025-11-07_469,punjab_stubble_belt,2025-11-07,31.325,74.725,239.8,257.6,Poor,5
+HS_punjab_stubble_belt_2025-11-07_470,punjab_stubble_belt,2025-11-07,31.325,74.925,232.9,259.4,Poor,3
+HS_punjab_stubble_belt_2025-11-07_471,punjab_stubble_belt,2025-11-07,31.325,75.2667,233.9,242.3,Poor,3
+HS_punjab_stubble_belt_2025-11-07_472,punjab_stubble_belt,2025-11-07,31.4904,74.7519,221.7,257.4,Poor,13
+HS_punjab_stubble_belt_2025-11-07_473,punjab_stubble_belt,2025-11-07,31.4972,75.0333,250.4,305.4,Very Poor,18
+HS_punjab_stubble_belt_2025-11-07_474,punjab_stubble_belt,2025-11-07,31.5596,75.2423,248.0,283.6,Poor,13
+HS_punjab_stubble_belt_2025-11-07_475,punjab_stubble_belt,2025-11-07,31.725,74.7812,246.9,298.4,Poor,8
+HS_punjab_stubble_belt_2025-11-07_476,punjab_stubble_belt,2025-11-07,31.779,75.015,236.4,284.5,Poor,25
+HS_punjab_stubble_belt_2025-11-07_477,punjab_stubble_belt,2025-11-07,31.7893,75.2286,251.2,285.7,Poor,14
+HS_punjab_stubble_belt_2025-11-08_478,punjab_stubble_belt,2025-11-08,31.325,74.725,238.8,248.4,Poor,4
+HS_punjab_stubble_belt_2025-11-08_479,punjab_stubble_belt,2025-11-08,31.325,75.0,297.0,325.1,Very Poor,6
+HS_punjab_stubble_belt_2025-11-08_480,punjab_stubble_belt,2025-11-08,31.325,75.2437,290.0,310.4,Very Poor,4
+HS_punjab_stubble_belt_2025-11-08_481,punjab_stubble_belt,2025-11-08,31.5083,74.7324,249.1,304.9,Very Poor,27
+HS_punjab_stubble_belt_2025-11-08_482,punjab_stubble_belt,2025-11-08,31.4985,74.9971,257.2,290.2,Poor,34
+HS_punjab_stubble_belt_2025-11-08_483,punjab_stubble_belt,2025-11-08,31.51,75.235,234.6,270.9,Poor,20
+HS_punjab_stubble_belt_2025-11-08_484,punjab_stubble_belt,2025-11-08,31.7792,74.7292,278.1,328.0,Very Poor,24
+HS_punjab_stubble_belt_2025-11-08_485,punjab_stubble_belt,2025-11-08,31.775,75.0,268.6,342.8,Very Poor,30
+HS_punjab_stubble_belt_2025-11-08_486,punjab_stubble_belt,2025-11-08,31.7897,75.2456,246.7,276.3,Poor,17
+HS_punjab_stubble_belt_2025-11-09_487,punjab_stubble_belt,2025-11-09,31.325,74.75,226.2,242.9,Poor,4
+HS_punjab_stubble_belt_2025-11-09_488,punjab_stubble_belt,2025-11-09,31.325,75.005,239.6,265.0,Poor,5
+HS_punjab_stubble_belt_2025-11-09_489,punjab_stubble_belt,2025-11-09,31.325,75.2437,238.7,254.6,Poor,4
+HS_punjab_stubble_belt_2025-11-09_490,punjab_stubble_belt,2025-11-09,31.5141,74.7359,251.9,301.5,Very Poor,23
+HS_punjab_stubble_belt_2025-11-09_491,punjab_stubble_belt,2025-11-09,31.5083,75.0167,247.9,322.5,Very Poor,30
+HS_punjab_stubble_belt_2025-11-09_492,punjab_stubble_belt,2025-11-09,31.5056,75.2431,231.5,269.1,Poor,18
+HS_punjab_stubble_belt_2025-11-09_493,punjab_stubble_belt,2025-11-09,31.785,74.7275,275.2,340.6,Very Poor,20
+HS_punjab_stubble_belt_2025-11-09_494,punjab_stubble_belt,2025-11-09,31.7611,74.9917,234.4,316.7,Very Poor,18
+HS_punjab_stubble_belt_2025-11-09_495,punjab_stubble_belt,2025-11-09,31.7667,75.2292,234.6,266.9,Poor,12
+HS_punjab_stubble_belt_2025-11-10_496,punjab_stubble_belt,2025-11-10,31.325,74.725,251.4,264.2,Poor,5
+HS_punjab_stubble_belt_2025-11-10_497,punjab_stubble_belt,2025-11-10,31.325,75.0,253.0,268.7,Poor,6
+HS_punjab_stubble_belt_2025-11-10_498,punjab_stubble_belt,2025-11-10,31.325,75.2,236.8,246.1,Poor,2
+HS_punjab_stubble_belt_2025-11-10_499,punjab_stubble_belt,2025-11-10,31.4989,74.7359,238.6,266.8,Poor,23
+HS_punjab_stubble_belt_2025-11-10_500,punjab_stubble_belt,2025-11-10,31.5,75.0015,243.7,280.2,Poor,34
+HS_punjab_stubble_belt_2025-11-10_501,punjab_stubble_belt,2025-11-10,31.506,75.2405,253.4,336.6,Very Poor,21
+HS_punjab_stubble_belt_2025-11-10_502,punjab_stubble_belt,2025-11-10,31.7961,74.7382,248.1,302.3,Very Poor,19
+HS_punjab_stubble_belt_2025-11-10_503,punjab_stubble_belt,2025-11-10,31.7625,74.99,253.7,329.5,Very Poor,20
+HS_punjab_stubble_belt_2025-11-10_504,punjab_stubble_belt,2025-11-10,31.775,75.2062,237.3,255.5,Poor,8
+HS_punjab_stubble_belt_2025-11-11_505,punjab_stubble_belt,2025-11-11,31.325,74.7083,277.4,343.1,Very Poor,3
+HS_punjab_stubble_belt_2025-11-11_506,punjab_stubble_belt,2025-11-11,31.325,75.0,233.9,247.6,Poor,6
+HS_punjab_stubble_belt_2025-11-11_507,punjab_stubble_belt,2025-11-11,31.325,75.2667,219.4,220.7,Poor,3
+HS_punjab_stubble_belt_2025-11-11_508,punjab_stubble_belt,2025-11-11,31.4683,74.7183,235.6,295.7,Poor,15
+HS_punjab_stubble_belt_2025-11-11_509,punjab_stubble_belt,2025-11-11,31.4357,74.975,223.9,271.3,Poor,14
+HS_punjab_stubble_belt_2025-11-11_510,punjab_stubble_belt,2025-11-11,31.4306,75.2222,211.8,223.3,Poor,9
+HS_punjab_stubble_belt_2025-11-11_511,punjab_stubble_belt,2025-11-11,31.825,74.665,213.7,225.2,Poor,5
+HS_punjab_stubble_belt_2025-11-11_512,punjab_stubble_belt,2025-11-11,31.7688,74.9312,224.3,247.1,Poor,8
+HS_punjab_stubble_belt_2025-11-11_513,punjab_stubble_belt,2025-11-11,31.805,75.22,232.8,291.1,Poor,5
+HS_punjab_stubble_belt_2025-11-12_514,punjab_stubble_belt,2025-11-12,31.325,74.725,278.0,293.7,Poor,5
+HS_punjab_stubble_belt_2025-11-12_515,punjab_stubble_belt,2025-11-12,31.325,75.025,273.8,318.8,Very Poor,4
+HS_punjab_stubble_belt_2025-11-12_516,punjab_stubble_belt,2025-11-12,31.325,75.3,206.5,206.5,Poor,1
+HS_punjab_stubble_belt_2025-11-12_517,punjab_stubble_belt,2025-11-12,31.4869,74.744,269.2,342.7,Very Poor,21
+HS_punjab_stubble_belt_2025-11-12_518,punjab_stubble_belt,2025-11-12,31.517,74.997,242.3,297.2,Poor,25
+HS_punjab_stubble_belt_2025-11-12_519,punjab_stubble_belt,2025-11-12,31.5417,75.2146,220.0,246.6,Poor,12
+HS_punjab_stubble_belt_2025-11-12_520,punjab_stubble_belt,2025-11-12,31.7639,74.7417,239.1,302.8,Very Poor,18
+HS_punjab_stubble_belt_2025-11-12_521,punjab_stubble_belt,2025-11-12,31.7542,75.0125,237.3,328.6,Very Poor,24
+HS_punjab_stubble_belt_2025-11-12_522,punjab_stubble_belt,2025-11-12,31.7806,75.25,225.6,248.1,Poor,9
+HS_punjab_stubble_belt_2025-11-13_523,punjab_stubble_belt,2025-11-13,31.325,74.725,263.5,278.2,Poor,5
+HS_punjab_stubble_belt_2025-11-13_524,punjab_stubble_belt,2025-11-13,31.325,75.0,282.4,338.2,Very Poor,6
+HS_punjab_stubble_belt_2025-11-13_525,punjab_stubble_belt,2025-11-13,31.325,75.2437,217.3,219.0,Poor,4
+HS_punjab_stubble_belt_2025-11-13_526,punjab_stubble_belt,2025-11-13,31.5,74.725,241.6,314.5,Very Poor,30
+HS_punjab_stubble_belt_2025-11-13_527,punjab_stubble_belt,2025-11-13,31.4983,75.01,251.9,321.7,Very Poor,30
+HS_punjab_stubble_belt_2025-11-13_528,punjab_stubble_belt,2025-11-13,31.4964,75.2393,243.4,317.5,Very Poor,21
+HS_punjab_stubble_belt_2025-11-13_529,punjab_stubble_belt,2025-11-13,31.7893,74.725,257.0,310.1,Very Poor,21
+HS_punjab_stubble_belt_2025-11-13_530,punjab_stubble_belt,2025-11-13,31.7821,74.9929,249.1,316.6,Very Poor,28
+HS_punjab_stubble_belt_2025-11-13_531,punjab_stubble_belt,2025-11-13,31.7868,75.2426,243.4,288.5,Poor,17
+HS_punjab_stubble_belt_2025-11-14_532,punjab_stubble_belt,2025-11-14,31.325,74.725,273.4,312.2,Very Poor,5
+HS_punjab_stubble_belt_2025-11-14_533,punjab_stubble_belt,2025-11-14,31.325,75.0,329.1,359.2,Very Poor,6
+HS_punjab_stubble_belt_2025-11-14_534,punjab_stubble_belt,2025-11-14,31.325,75.2437,227.6,237.2,Poor,4
+HS_punjab_stubble_belt_2025-11-14_535,punjab_stubble_belt,2025-11-14,31.5038,74.7288,266.2,341.1,Very Poor,26
+HS_punjab_stubble_belt_2025-11-14_536,punjab_stubble_belt,2025-11-14,31.4979,75.0021,289.1,418.0,Severe,35
+HS_punjab_stubble_belt_2025-11-14_537,punjab_stubble_belt,2025-11-14,31.5224,75.2316,255.6,302.1,Very Poor,19
+HS_punjab_stubble_belt_2025-11-14_538,punjab_stubble_belt,2025-11-14,31.7725,74.745,274.1,341.8,Very Poor,20
+HS_punjab_stubble_belt_2025-11-14_539,punjab_stubble_belt,2025-11-14,31.7843,74.9972,247.5,352.6,Very Poor,27
+HS_punjab_stubble_belt_2025-11-14_540,punjab_stubble_belt,2025-11-14,31.7779,75.2353,253.3,363.8,Very Poor,17
+HS_punjab_stubble_belt_2025-11-15_541,punjab_stubble_belt,2025-11-15,31.325,74.725,267.0,290.0,Poor,5
+HS_punjab_stubble_belt_2025-11-15_542,punjab_stubble_belt,2025-11-15,31.325,75.225,202.9,203.7,Poor,2
+HS_punjab_stubble_belt_2025-11-15_543,punjab_stubble_belt,2025-11-15,31.4929,74.7304,273.5,348.1,Very Poor,28
+HS_punjab_stubble_belt_2025-11-15_544,punjab_stubble_belt,2025-11-15,31.5062,74.9625,232.9,269.2,Poor,8
+HS_punjab_stubble_belt_2025-11-15_545,punjab_stubble_belt,2025-11-15,31.475,75.2364,225.3,258.0,Poor,11
+HS_punjab_stubble_belt_2025-11-15_546,punjab_stubble_belt,2025-11-15,31.7977,74.7432,232.4,284.9,Poor,11
+HS_punjab_stubble_belt_2025-11-15_547,punjab_stubble_belt,2025-11-15,31.7795,74.9159,217.7,244.3,Poor,11
+HS_punjab_stubble_belt_2025-11-15_548,punjab_stubble_belt,2025-11-15,31.8194,75.2389,217.6,236.6,Poor,9
