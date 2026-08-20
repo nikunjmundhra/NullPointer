@@ -489,44 +489,53 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Live Monitor</div>
-      <h2>The hotspot map.</h2>
-      <p>Running on synthetic data until the pipeline's real output lands — same schema, same interactions, no rewrite needed on handoff.</p>
+      <h2>The hotspot map judges actually interact with.</h2>
+      <p>Measured satellite HCHO is transformed by the pipeline into directional surface-AQI predictions, with predicted hotspots separated from direct observations.</p>
     </div>
 
     <div class="monitor-shell">
+      <div class="monitor-tabs" id="modeTabs" style="border-bottom:1px solid var(--line); background:var(--panel-raised);">
+        <button class="monitor-tab active" data-mode="live" style="font-weight:600;"><span class="dotstat"></span>Live Feed (Monsoon 2026)</button>
+        <button class="monitor-tab" data-mode="historical" style="font-weight:600;"><span class="dotstat"></span>Historical (Stubble Season 2025)</button>
+      </div>
       <div class="monitor-tabs" id="regionTabs"></div>
       <div class="monitor-body">
         <div id="map"></div>
         <div class="monitor-side">
           <div class="kpi-grid">
-            <div class="kpi"><div class="kpi-label">Mean HCHO</div><div class="kpi-value" id="kpiHcho">—</div></div>
-            <div class="kpi"><div class="kpi-label">Max HCHO</div><div class="kpi-value amber" id="kpiAnomaly">—</div></div>
-            <div class="kpi"><div class="kpi-label">Hotspot cells</div><div class="kpi-value" id="kpiHotspots">—</div></div>
-            <div class="kpi"><div class="kpi-label">Grid flagged</div><div class="kpi-value sage" id="kpiBaseline">—</div></div>
+            <div class="kpi"><div class="kpi-label">Mean predicted AQI</div><div class="kpi-value" id="kpiHcho">—</div></div>
+            <div class="kpi"><div class="kpi-label">Peak predicted AQI</div><div class="kpi-value amber" id="kpiAnomaly">—</div></div>
+            <div class="kpi"><div class="kpi-label">Model hotspots</div><div class="kpi-value" id="kpiHotspots">—</div></div>
+            <div class="kpi"><div class="kpi-label">Mean observed HCHO</div><div class="kpi-value sage" id="kpiBaseline">—</div></div>
           </div>
           <div class="slider-block">
-            <div class="slider-row">
-              <span>Observation</span>
-              <b id="dateLabel">—</b>
+            <div class="slider-row" style="align-items:center;">
+              <span>Observation Date</span>
+              <div style="display:flex; align-items:center; gap:4px;">
+                <button id="prevDateBtn" title="Previous Date" style="padding:3px 8px; font-family:var(--mono); font-size:12px; background:var(--panel-raised); border:1px solid var(--line); color:var(--ink); cursor:pointer; border-radius:4px;">‹</button>
+                <select id="dateSelect" style="font-family:var(--mono); font-size:11.5px; padding:4px 6px; background:var(--panel); border:1px solid var(--line); color:var(--ink); cursor:pointer; border-radius:4px; max-width:180px;"></select>
+                <button id="nextDateBtn" title="Next Date" style="padding:3px 8px; font-family:var(--mono); font-size:12px; background:var(--panel-raised); border:1px solid var(--line); color:var(--ink); cursor:pointer; border-radius:4px;">›</button>
+              </div>
             </div>
-            <div style="font-family:var(--mono);font-size:10.5px;color:var(--ink-muted);">Single live TROPOMI pass — historical series not yet available from Team B.</div>
+            <div id="modelNote" style="font-family:var(--mono);font-size:10.5px;color:var(--ink-muted);margin-top:6px;">Loading model metadata…</div>
           </div>
           <div class="advisory">
             <div class="advisory-label">Advisory</div>
             <div class="advisory-text" id="advisoryText">Loading…</div>
             <div class="legend">
-              <div class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Higher HCHO intensity</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#6eaaa4"></span>Observed satellite HCHO</div>
+              <div class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Predicted surface AQI</div>
             </div>
           </div>
         </div>
       </div>
       <div class="charts">
         <div class="chart-cell">
-          <h4>Top ranked hotspot cells — this region</h4>
+          <h4>Highest predicted AQI cells — this region</h4>
           <canvas id="trendChart"></canvas>
         </div>
         <div class="chart-cell">
-          <h4>Grid flagged (%) — all regions</h4>
+          <h4>Model hotspots — all regions</h4>
           <canvas id="anomalyChart"></canvas>
         </div>
       </div>

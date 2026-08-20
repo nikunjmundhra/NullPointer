@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-19T11:06:48.451784+00:00",
+  "generated_at": "2026-08-20T18:01:28.658360+00:00",
   "regions": [
     "delhi_ncr",
     "kanpur_industrial",
@@ -26,7 +26,7 @@
     "historical": {
       "schema_version": "1.0.0",
       "mode": "historical",
-      "generated_at": "2026-08-19T11:06:48.244026+00:00",
+      "generated_at": "2026-08-20T18:01:28.342889+00:00",
       "regions": [
         "delhi_ncr",
         "kanpur_industrial",
@@ -55,7 +55,7 @@
     "live": {
       "schema_version": "1.0.0",
       "mode": "live",
-      "generated_at": "2026-08-19T11:06:48.435595+00:00",
+      "generated_at": "2026-08-20T18:01:28.627558+00:00",
       "regions": [
         "delhi_ncr",
         "kanpur_industrial",
