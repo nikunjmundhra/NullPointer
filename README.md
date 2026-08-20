@@ -6,7 +6,27 @@ across three regions (Delhi NCR, Kanpur industrial belt, Punjab stubble-burning
 belt), for two windows: a historical stubble-burning window
 (2025-10-15 → 2025-11-15) and a live feed.
 
+## Dashboard Preview
+
+![AirLens Live Hotspot Monitor](docs/images/dashboard_live_monitor.png)
+*AirLens Interactive Dashboard — AQI Heatmap & Hotspot Detection Monitor (Punjab Stubble Burning Window)*
+
+<details>
+<summary><b>📸 Click to expand additional interface screenshots</b></summary>
+
+### Landing Overview
+![AirLens Dashboard Overview](docs/images/dashboard_landing.png)
+
+### Coverage Gap Analysis (Ground Stations vs Satellite)
+![Ground Station Coverage Gap](docs/images/dashboard_coverage_gap.png)
+
+### End-to-End Data Pipeline Architecture
+![Pipeline Processing Steps](docs/images/dashboard_pipeline.png)
+
+</details>
+
 ## How the three teams connect
+
 
 ```
 Team A (data collection)          Team B (this repo's analysis)         Team C
